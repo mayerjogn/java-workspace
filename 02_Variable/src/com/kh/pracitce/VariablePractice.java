@@ -49,7 +49,7 @@ public class VariablePractice {
 		int b = 21000;
 		int c = 41000;
 		
-		System.out.println(name1 + a + "원 \n"+ name2 + b + "원 \n\n" + name3 + c + "원");
+		System.out.println(name1 + a + "원 \n"+ name2 + b + "원 \n\n" + name3 + c + "원\n");
 	}
 
 	public void method3() {		
@@ -63,8 +63,8 @@ public class VariablePractice {
 		
 		System.out.println("x=" + x);
 		System.out.println("y=" + y);
-		System.out.println("z=" + z);
-		System.out.println("\n");
+		System.out.println("z=" + z+"\n");
+		
 		
 	}
 
