@@ -42,8 +42,8 @@ public class C_Printf {
 		double dNum2 = 4.53;
 		
 		// 무조건 소수점 아래 6번째 자리까지 보여줌
-		System.out.printf("%f\f\t& %f", dNum1, dNum2);
-		System.out.printf("%f.3f\t& .2f\n", dNum1, dNum2);
+		System.out.printf("%f\f\t& %f\n", dNum1, dNum2);
+		System.out.printf("%f.3f\t& %.2f\n", dNum1, dNum2);
 		
 		System.out.println("-----------");
 		

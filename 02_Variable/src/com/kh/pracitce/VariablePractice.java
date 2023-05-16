@@ -11,14 +11,14 @@ public class VariablePractice {
 	
 		VariablePractice vp = new VariablePractice();
 	//	vp.method1();
-	//	vp.method2();
+		vp.method2();
 		vp.method3();
-	//	vp.method4();
+		vp.method4();
 		
 
 }
 	
-	/*
+	
 	public void method1() {
 
 		
@@ -34,36 +34,45 @@ public class VariablePractice {
 		System.out.println("빼기 결과 : " + (num1 - num2));
 		System.out.println("곱하기 결과 :"+ (num1 * num2));
 		System.out.println("나누기 몫 결과 :" +(num1 / num2));
+	}
 		
 		
-}
-*/
+
+
+	
 	public void method2() {
-		char ch1 = 'a';
-		char ch2 = 'b';	 
+		String name1 = "성인 2명 : ";
+		String name2 = "청소년 3명 : ";		
+		String name3 = "총 금액 : ";
 		
+		int a = 20000;
+		int b = 21000;
+		int c = 41000;
 		
-		
-		System.out.println("성인 2명의 요금은"+"청소년 3명의 요금은"+"이며"+"총 금액은"+"입니다");
+		System.out.println(name1 + a + "원 \n"+ name2 + b + "원 \n\n" + name3 + c + "원");
 	}
 
 	public void method3() {		
 		int x = 5;
 		int y = 7;
 		int z = 9;
-		
-	
+				
+		int result1 = x=7;
+		int result2 = y=9;
+		int result3 = z=5;
 		
 		System.out.println("x=" + x);
 		System.out.println("y=" + y);
 		System.out.println("z=" + z);
+		System.out.println("\n");
 		
 	}
+
 	
 	public void method4() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("문자열을 입력하세요");
+		System.out.print("문자열을 입력하세요 : ");
 		 sc.next();
 		
 		
@@ -72,4 +81,5 @@ public class VariablePractice {
 		
 		
 }
+	
 }
