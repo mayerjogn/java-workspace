@@ -8,11 +8,19 @@ public class OperatorPractice {
 		OperatorPractice op = new OperatorPractice();
 		
 		
+<<<<<<< HEAD
 //		op.method2();
 //		op.method3();
 		
 //		op.method5();
 		op.method6();
+=======
+		op.method2();
+//		op.method3();
+		
+//		op.method5();
+//		op.method6();
+>>>>>>> parent of 85f2b92 (Update OperatorPractice.java)
 		
 	}
 	
@@ -29,32 +37,34 @@ public class OperatorPractice {
 
 		System.out.println(result);
  }
-
+/*
 	public void method3() {
+		boolean b1 = true;
+		boolean b2 = false;
 		
-			
+		
 		String str = "";
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("입력1 : ");
-		int num1 = sc.nextInt();
+		int a = sc.nextInt();
 		
 		System.out.print("입력2 : ");
-		int num2 = sc.nextInt();
+		int b = sc.nextInt();
 		
 		System.out.print("입력3 : ");
-		int num3 = sc.nextInt();
+		int c = sc.nextInt();
 		
-//		String result = num1 ==num2 num3== ? ;
-				
-//		System.out.println(result);
+		boolean result = (a,b,c == ) :true (a,b,c != ) : false; 
+		
+		System.out.println(result);
 		
 		
 		
 		
 } 
 	
-		
+*/		
 	
 
 
@@ -82,11 +92,6 @@ public class OperatorPractice {
 				
 				System.out.print("필요한 바구니의 수 : ");
 				
-				int num3 = num1/num2;
-				
-				int result = (++num3);
-				
-				System.out.println(result);
 				
 	}	
 }
