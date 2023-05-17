@@ -9,10 +9,10 @@ public class OperatorPractice {
 		
 		
 //		op.method2();
-		op.method3();
+//		op.method3();
 		
-		op.method5();
-//		op.method6();
+//		op.method5();
+		op.method6();
 		
 	}
 	
@@ -72,7 +72,6 @@ public class OperatorPractice {
 		
 				Scanner sc = new Scanner(System.in);
 				
-				String str = "";
 				
 				
 				System.out.print("사과의 개수 : ");
