@@ -11,8 +11,8 @@ public class OperatorPractice {
 
 //		op.method2();
 //		op.method3();		
-		op.method5();				
-//		op.method6();
+//		op.method5();				
+		op.method6();
 
 			}
 	
@@ -68,6 +68,14 @@ public class OperatorPractice {
 		System.out.print("나이 : ");
 		int a = sc.nextInt();
 		
+		System.out.print("어린이 : ");
+		int b = sc.nextInt();
+		
+		System.out.print("청소년 : ");
+		int c = sc.nextInt();
+	
+		System.out.print("성인 : ");
+		int d = sc.nextInt();
 	}
 	public void method6() {
 		 
@@ -83,9 +91,9 @@ public class OperatorPractice {
 
 				System.out.print("필요한 바구니의 수 : ");
 
-				int num3 = num1/num2;
-
-				int result = (++num3);
+				
+				int num3 =num1/num2 + (num1%num2>0 ? 1:0);
+				int result = num3 ; 
 
 				System.out.println(result);
 
