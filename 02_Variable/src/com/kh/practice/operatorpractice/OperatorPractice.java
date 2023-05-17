@@ -8,21 +8,13 @@ public class OperatorPractice {
 		OperatorPractice op = new OperatorPractice();
 		
 		
-<<<<<<< HEAD
+
 //		op.method2();
-//		op.method3();
-		
-//		op.method5();
-		op.method6();
-=======
-		op.method2();
-//		op.method3();
-		
-//		op.method5();
+//		op.method3();		
+		op.method5();				
 //		op.method6();
->>>>>>> parent of 85f2b92 (Update OperatorPractice.java)
-		
-	}
+
+			}
 	
 	
 	public void method2() {
