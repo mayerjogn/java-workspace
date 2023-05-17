@@ -11,9 +11,9 @@ public class VariablePractice {
 	
 		VariablePractice vp = new VariablePractice();
 	//	vp.method1();
-	//	vp.method2();
-	//	vp.method3();
-		vp.method4();
+		vp.method2();
+		vp.method3();
+	//	vp.method4();
 		
 
 }
@@ -56,7 +56,11 @@ public class VariablePractice {
 		int x = 5;
 		int y = 7;
 		int z = 9;
-				
+		
+		int num1 =7;
+		int num2 =9;
+		int num3 =5;
+		
 		int result1 = x=7;
 		int result2 = y=9;
 		int result3 = z=5;
@@ -64,20 +68,40 @@ public class VariablePractice {
 		System.out.println("x=" + x);
 		System.out.println("y=" + y);
 		System.out.println("z=" + z+"\n");
-		
+		//어떤 변수를 써야할지 잘모르겠어요
 		
 	}
 
 	
 	public void method4() {
 		Scanner sc = new Scanner(System.in);
-		String a = "문자열을 입력하세요 : ";
-		String b = "첫번째 문자 : c\n마지막 문자 : r";
-	//	String c = "마지막 문자 : r";
-		System.out.printf(a);
-		 sc.next();
+		String a  ="문자열을 입력하세요 : ";
 		
-		System.out.printf(b);		
+		System.out.print(a);
+		a = sc.nextLine();
+		
+		//c1 = sc.nextLine().charAt(0);
+		//c2 = sc.nextLine().charAt(-1);
+		
+		System.out.println("첫번째 문자 : " + a.charAt(0));
+		System.out.println("마지막 문자 : " + a.charAt(a.length()-1));
+		
+		
+	//	System.out.println("마지막 문자 : " );
+	//	String  = "첫번째 문자 : c\n마지막 문자 : r";
+	//	String c = "마지막 문자 : r";
+	//	result = sc.next();
+	//	System.out.printf(result);
+				
+	//	System.out.printf(b);
+		
+		
+		/*		System.out.print("문자열을 입력하세요 : ");
+		sc.nextLine();
+		
+		
+		System.out.print("첫번째 문자 : c\n"+"마지막 문자 : r");
+		sc.nextLine();*/
 }
 	
 }
