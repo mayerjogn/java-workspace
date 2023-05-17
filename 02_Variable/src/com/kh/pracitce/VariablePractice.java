@@ -11,8 +11,8 @@ public class VariablePractice {
 	
 		VariablePractice vp = new VariablePractice();
 	//	vp.method1();
-		vp.method2();
-		vp.method3();
+	//	vp.method2();
+	//	vp.method3();
 		vp.method4();
 		
 
@@ -71,15 +71,13 @@ public class VariablePractice {
 	
 	public void method4() {
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.print("문자열을 입력하세요 : ");
+		String a = "문자열을 입력하세요 : ";
+		String b = "첫번째 문자 : c\n마지막 문자 : r";
+	//	String c = "마지막 문자 : r";
+		System.out.printf(a);
 		 sc.next();
 		
-		
-		System.out.print("첫번째 문자 : c\n"+"마지막 문자 : r");
-		sc.nextLine();
-		
-		
+		System.out.printf(b);		
 }
 	
 }
