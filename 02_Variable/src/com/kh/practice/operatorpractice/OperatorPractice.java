@@ -75,14 +75,22 @@ public class OperatorPractice {
 				Scanner sc = new Scanner(System.in);
 				
 				
-				
 				System.out.print("사과의 개수 : ");
 				int num1 = sc.nextInt();
 				
 				System.out.print("바구니의 크기 : ");
 				int num2 = sc.nextInt();
-				
+
 				System.out.print("필요한 바구니의 수 : ");
+
+				int num3 = num1/num2;
+
+				int result = (++num3);
+
+				System.out.println(result);
+
+				
+				
 				
 				
 	}	
