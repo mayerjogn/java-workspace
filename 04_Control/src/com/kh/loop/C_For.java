@@ -43,9 +43,41 @@ public class C_For {
 			System.out.println(i+1);	
 		}
 	}
+
+	
+	//1~5 반대로 출력
+	public void method2() {
+		
+		for(int i=5; i>=1; i--) {
+			System.out.println(i);
+		}
+		
+	}
+	
+	//1~10 사이의 홀수만 출력
+	//1
+	//3
+	//5
+	//7
+	//9
+	
+	public void method3() {
+		for(int i=1; i<=10; i++) {
+			if(i%2==1)
+			System.out.println(i);
+	// for(int i=1; i<=10; i+=){
+	//		System.out.println(i);
+		}
+		
+	}
+	
 	public static void main(String[] args) {
 		C_For c = new C_For();
-		c.method1();
+	//	c.method1();
+	//	c.method2();
+		c.method3();
+		
+		
 	}
 
 }
