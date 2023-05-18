@@ -24,14 +24,16 @@ public class ConditionPractice {
     		System.out.println("홀수다");
     	else if (num %2==0)   
     		System.out.println("짝수다");
-    	else if (num<0)
+    	else if (num>0)
+    		System.out.println("짝수다");
+    	else if (num>1)
     		System.out.println("양수만 입력해 주세요.");
-    	
-    	
+    	}
+    
     //	if(num %2==1)
     	//	System.out.println("홀수다");
-    	 }
-    	//if(num %2==1){
+    	 
+    //	if(num %2==1){
     	//	System.out.println("홀수다");
     	    	
        
@@ -246,8 +248,8 @@ public class ConditionPractice {
     }
 public static void main(String[] args) {
 	ConditionPractice c= new ConditionPractice();
-//	c.practice1();
-	c.practice2();
+	c.practice1();
+//	c.practice2();
 //	c.practice3();
 //	c.practice4();
 //	c.practice5();

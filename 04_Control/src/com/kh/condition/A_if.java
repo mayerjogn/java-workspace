@@ -219,6 +219,7 @@ public class A_if {
 				
 				System.out.println("num2 입력>");
 				int num2 = sc.nextInt();
+				
 				System.out.println("num3 입력>");
 				int num3 = sc.nextInt();
 				
@@ -286,8 +287,8 @@ public class A_if {
 //		a.method4();
 //		a.method5();
 //		a.method6();
-//		a.Practice1();
-		a.Practice2();
+		a.Practice1();
+//		a.Practice2();
 		
 	}
 
