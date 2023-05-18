@@ -6,11 +6,11 @@ public class OperatorPractice {
 	
 	public static void main(String[] args) {
 		OperatorPractice op =new OperatorPractice();
-		//op.method1();
-		//op.method2();
+	//	op.method1();
+	//	op.method2();
 		//op.method3();
-		//op.method4();
-		op.method5();
+	//	op.method4();
+		//op.method5();
 	//	op.method6();
 	}
 	
@@ -42,12 +42,16 @@ public class OperatorPractice {
 	}
 	
 	public void method2() {
-		int num1 = 0;
-		String result = "";
-		Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
+		int num;
+		int result ;
+		
 		
 		System.out.print("양수를 입력해주세요 > ");
-		num1 = sc.nextInt();
+		num = sc.nextInt();
+		result = (num/100*100);
+		
+		System.out.println(result);
 		
 	//	result=
 			
@@ -114,5 +118,20 @@ public class OperatorPractice {
 				
 	}
 	public void method6() {
+		Scanner sc = new Scanner(System.in);
+				
+		System.out.print("사과의 개수 : ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("바구니의 크기 : ");
+		int num2 = sc.nextInt();
+
+		System.out.print("필요한 바구니의 수 : ");
+		
+		int num3 =num1/num2 + (num1%num2>0 ? 1:0);
+		int result = num3 ; 
+
+		System.out.println(result);
+
 }
 }
