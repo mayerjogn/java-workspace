@@ -156,40 +156,28 @@ public class A_if {
 		 * */
 		
 		public void method6() {
-			
-			int number = 0;
-			
-			System.out.print("점수 입력 >");
-			number = sc.nextInt();
-			
-			if(number >= 90) {
-				System.out.println("A 등급");				
-			}else if (number >= 90 ) {
-				System.out.println("B 등급");
-			}else if (number > 80) {
-				System.out.println("C 등급");				
-			}else if (number > 70) {
-				System.out.println("D 등급");				
-			}else {
-				System.out.println("F 등급");
-			}
-		/*
-		 * int score = 0;
-		 * score = sc.nextInt();
-		 * if (score>=) {
-		 *  System.out.print("A");
-		 * else if(score< 90&& score >= 80){
-		 *  System.out.print("B");
-		 * }else if(score <80&& score >=70{
-		 *  System.out.print("C");
-		 * }else if(score <70&& score >=60
-		 *  System.out.print("D");
-		 *  }else{
-		 *  System.out.println("F");
-		 * */	
-			char grade ='\u0000';
-			
+						
+		
+		  System.out.print("점수 입력 >");	
+		  int score = 0;
+		  score = sc.nextInt();
+		  if (score>=90) {
+		   System.out.print("A");
+		  }else if(score< 90&& score >= 80){
+		   System.out.print("B");
+		  }else if(score <80&& score >=70){
+		  System.out.print("C");
+		  }else if(score <70&& score >=60)
+		   System.out.print("D");
+		   else
+		   System.out.println("F");
+		}
+		  
+		/*	
+		   	  char grade ='\u0000';
+		   	
 			  int score = 0;
+			  System.out.print("점수 입력 >");
 			  score = sc.nextInt();
 			  if (score >= 90) {
 			   grade = 'A'; }
@@ -204,6 +192,7 @@ public class A_if {
 			    System.out.println(grade);
 			  }
 			  }		  
+		*/
 		
 			  /*
 				 * 세 정수를 입력했을 때 짝수만 출력
@@ -242,19 +231,19 @@ public class A_if {
 				  System.out.println("정수 입력 > ");
 				  int num = sc.nextInt();
 				  
-				  if(num > 0) 
+				  if(num > 0) { 
 					  System.out.println("plus");
-				  else if (num == 0)
+				  }else if (num == 0) {
 					  System.out.println("zero");
-				  else
+			  	  }else {
 					  System.out.println("minus");
-				  
-				  if (num %2==0) 
+			  	  }
+				  if (num %2==0) { 
 					  System.out.println("even");
-				  else
+				  }else {
 					  System.out.println("odd");
 				  }
-				  
+			  }  
 				  
 				  
 			/*	if(num<0) {
@@ -288,7 +277,7 @@ public class A_if {
 //		a.method4();
 //		a.method5();
 //		a.method6();
-		a.Practice1();
+//		a.Practice1();
 //		a.Practice2();
 		
 	}

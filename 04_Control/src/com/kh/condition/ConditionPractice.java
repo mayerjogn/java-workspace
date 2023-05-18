@@ -74,38 +74,25 @@ public class ConditionPractice {
 
         피자 조각 수 : 7
         피자 먹는 사람 수 : 10
-         2 판 정돈 있어야 10명이서 14조각 먹지
+         2 
 
      */
     public void practice3() {
-    	
-    	for(int i = 0; i<=1; i++) {
-    		
-    	
-    	
+    	   	
     	System.out.println("피자 조각 수 : ");
-    	i =sc.nextInt();
-    	
-    	
-    	for(int x = 1; x<=1; x--) {
-    		
-    	
+    	int a =sc.nextInt();
+    	   	
     	System.out.println("피자 먹는 사람 수 : ");
-    	x = sc.nextInt();
-    	System.out.println(i+"판");
-    	}
-    }
-}
+    	int b = sc.nextInt();
     	
-    	
-    
+    	int c = a / b ;
+    		if(a % b != 0) {
+    			c ++;
+    		}
+       		System.out.println(c);
+    		} 		
+    	        	
     	  
-    	  
-    	  
-    	  
-        
-
-
     /*4 
         국어, 영어, 수학 세 과목의 점수를 키보드로 입력 받고 합계와 평균을 계산하고
         합계와 평균을 이용하여 합격 / 불합격 처리하는 기능을 구현하세요.
@@ -129,6 +116,15 @@ public class ConditionPractice {
         축하합니다, 합격입니다!
      */
     public void practice4() {
+    	
+    	System.out.print("국어 : ");
+		int a = sc.nextInt();
+		
+		System.out.print("영어 : ");
+		int b = sc.nextInt();
+		
+		System.out.print("수학 : ");
+		int c = sc.nextInt();
   
     }
 
@@ -277,8 +273,8 @@ public static void main(String[] args) {
 	ConditionPractice c= new ConditionPractice();
 	//c.practice1(); o
 	//c.practice2(); o
-	c.practice3();
-//	c.practice4(); x
+	//c.practice3(); x
+	c.practice4(); 
 //	c.practice5(); x
 //	c.practice6(); x
 //	c.practice7(); x
