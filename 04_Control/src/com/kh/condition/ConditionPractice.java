@@ -1,7 +1,10 @@
 package com.kh.condition;
 
-public class ConditionPractice {
+import java.util.Scanner;
 
+public class ConditionPractice {
+	
+	Scanner sc = new Scanner(System.in);
     /*
        키보드로 정수를 입력 받은 정수가 양수이면서 짝수일 때만 “짝수다”를 출력하고
        짝수가 아니면 “홀수다“를 출력하세요.
@@ -11,8 +14,28 @@ public class ConditionPractice {
        양수만 입력해주세요.
      */
     public void practice1() {
-        
-    }
+    	int num=0;
+    	
+    	System.out.println("숫자 입력");
+    	 num = sc.nextInt();
+    	
+     
+    	if(num %2==1) 
+    		System.out.println("홀수다");
+    	else if (num %2==0)   
+    		System.out.println("짝수다");
+    	else if (num<0)
+    		System.out.println("양수만 입력해 주세요.");
+    	
+    	
+    //	if(num %2==1)
+    	//	System.out.println("홀수다");
+    	 }
+    	//if(num %2==1){
+    	//	System.out.println("홀수다");
+    	    	
+       
+    
 
     /*
         정수 num1과 num2가 매개변수로 주어진다. 두 수가 같으면 1 다르면 -1을 출력하세요.
@@ -26,8 +49,19 @@ public class ConditionPractice {
         1
      */
     public void practice2() {
+    	
+    	System.out.println("num1 입력");
+   	 	int num1 = sc.nextInt();
+        System.out.println("num2 입력");
+	 	int	num2 = sc.nextInt();
         
-    }
+        if(num1==num2)
+        	System.out.println(1);
+        else if(num1!=num2)
+        	System.out.println(-1);
+        	
+        }
+  //  }
 
     /*
         A 피자가게는 피자를 두 조각에서 열 조각까지 원하는 조각 수로 잘라준다.
@@ -210,5 +244,21 @@ public class ConditionPractice {
     public void practice11() {
         
     }
+public static void main(String[] args) {
+	ConditionPractice c= new ConditionPractice();
+//	c.practice1();
+	c.practice2();
+//	c.practice3();
+//	c.practice4();
+//	c.practice5();
+//	c.practice6();
+//	c.practice7();
+//	c.practice8();
+//	c.practice9();
+//	c.practice10();
+//	c.practice11();
+	
+	}
     
 }
+
