@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ConditionPractice {
 	
 	Scanner sc = new Scanner(System.in);
-    /*
+    /*1
        키보드로 정수를 입력 받은 정수가 양수이면서 짝수일 때만 “짝수다”를 출력하고
        짝수가 아니면 “홀수다“를 출력하세요.
        양수가 아니면 “양수만 입력해주세요.”를 출력하세요.
@@ -18,16 +18,18 @@ public class ConditionPractice {
     	
     	System.out.println("숫자 입력");
     	 num = sc.nextInt();
+    	     
+    	if((num %2==0)&&(num>0)){ 
+    		System.out.println("짝수다");
+    		
+    	} else if(num %2==1) {   
+        	System.out.println("홀수다");	
     	
-     
-    	if(num %2==1) 
-    		System.out.println("홀수다");
-    	else if (num %2==0)   
-    		System.out.println("짝수다");
-    	else if (num>0)
-    		System.out.println("짝수다");
-    	else if (num>1)
+    	}else if (num < 0) {
     		System.out.println("양수만 입력해 주세요.");
+    
+    	} 		
+    	
     	}
     
     //	if(num %2==1)
@@ -39,7 +41,7 @@ public class ConditionPractice {
        
     
 
-    /*
+    /*2
         정수 num1과 num2가 매개변수로 주어진다. 두 수가 같으면 1 다르면 -1을 출력하세요.
 
         num1 : 2
@@ -65,21 +67,46 @@ public class ConditionPractice {
         }
   //  }
 
-    /*
+    /*3
         A 피자가게는 피자를 두 조각에서 열 조각까지 원하는 조각 수로 잘라준다.
         피자 조각 수와 피자를 먹는 사람의 수를 입력받아 한 사람 당 최소 한 조각 이상 피자를 먹으려면 
         최소 몇 판의 피자를 시켜야 하는지 출력하세요.
 
         피자 조각 수 : 7
         피자 먹는 사람 수 : 10
-        2
+         2 판 정돈 있어야 10명이서 14조각 먹지
 
      */
     public void practice3() {
-        
+    	
+    	for(int i = 0; i<=1; i++) {
+    		
+    	
+    	
+    	System.out.println("피자 조각 수 : ");
+    	i =sc.nextInt();
+    	
+    	
+    	for(int x = 1; x<=1; x--) {
+    		
+    	
+    	System.out.println("피자 먹는 사람 수 : ");
+    	x = sc.nextInt();
+    	System.out.println(i+"판");
+    	}
     }
+}
+    	
+    	
+    
+    	  
+    	  
+    	  
+    	  
+        
 
-    /*
+
+    /*4 
         국어, 영어, 수학 세 과목의 점수를 키보드로 입력 받고 합계와 평균을 계산하고
         합계와 평균을 이용하여 합격 / 불합격 처리하는 기능을 구현하세요.
         (합격 조건 : 세 과목의 점수가 각각 40점 이상이면서 평균이 60점 이상일 경우)
@@ -105,7 +132,7 @@ public class ConditionPractice {
   
     }
 
-    /*
+    /*5
         B 옷가게는 10만 원 이상 사면 5%, 30만 원 이상 사면 10%, 50만원 이상 사면 20%를 할인해준다.
         구매한 옷의 가격을 입력했을 때, 지불해야 할 금액을 출력하세요.
         
@@ -117,7 +144,7 @@ public class ConditionPractice {
     }
 
 
-    /*
+    /*6
         각에서 0도 초과 90도 미만은 예각, 90도는 직각, 90도 초과 180도 미만은 둔각 180도는 평각으로 분류한다.
         입력받은 각에 따라 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 출력하세요.
      */
@@ -126,7 +153,7 @@ public class ConditionPractice {
     }
 
 
-    /*
+    /*7
       아이디, 비밀번호를 정해두고 로그인 기능을 작성하세요.
       로그인 성공 시 “로그인 성공”, 
       아이디가 틀렸을 시 “아이디가 틀렸습니다.“,
@@ -148,7 +175,7 @@ public class ConditionPractice {
  
     }
 
-    /*
+    /*8
         키, 몸무게를 double로 입력 받고 BMI지수를 계산하여 계산 결과에 따라
         저체중 / 정상체중 / 과체중 / 비만을 출력하세요.
         BMI = 몸무게 / (키(m) * 키(m))
@@ -166,7 +193,7 @@ public class ConditionPractice {
        
     }
 
-    /*
+    /*9
         키보드로 두 개의 양수와 연산 기호를 입력 받아 연산 기호에 맞춰 연산 결과를 출력하세요.
         (단, 양수가 아닌 값을 입력하거나 제시되어 있지 않은 연산 기호를 입력 했을 시
         “잘못 입력하셨습니다. 프로그램을 종료합니다.” 출력)
@@ -181,7 +208,7 @@ public class ConditionPractice {
 
     }
 
-    /*
+    /*10
       아래 예시와 같이 메뉴를 출력하고 메뉴 번호를 누르면 “OO메뉴입니다“를,
       종료 번호를 누르면 “프로그램이 종료됩니다.”를 출력하세요
 
@@ -197,7 +224,7 @@ public class ConditionPractice {
 
     }
 
-    /*
+    /*11
         중간고사, 기말고사, 과제점수, 출석회수를 입력하고 Pass 또는 Fail을 출력하세요.
         총 점 100점 중 배점으로는 다음과 같다.
         중간고사 (20%), 기말고사 (30%), 과제 (30%), 출석 (20%)
@@ -248,17 +275,17 @@ public class ConditionPractice {
     }
 public static void main(String[] args) {
 	ConditionPractice c= new ConditionPractice();
-	c.practice1();
-//	c.practice2();
-//	c.practice3();
-//	c.practice4();
-//	c.practice5();
-//	c.practice6();
-//	c.practice7();
-//	c.practice8();
-//	c.practice9();
-//	c.practice10();
-//	c.practice11();
+	//c.practice1(); o
+	//c.practice2(); o
+	c.practice3();
+//	c.practice4(); x
+//	c.practice5(); x
+//	c.practice6(); x
+//	c.practice7(); x
+//	c.practice8(); x
+//	c.practice9(); x
+//	c.practice10(); x
+//	c.practice11(); x
 	
 	}
     

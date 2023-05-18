@@ -16,7 +16,7 @@ public class E_Logical {
 	 * */
 	public static void main(String[] args) {
 		E_Logical e = new E_Logical();
-	//	e.method1(); 주석처리 ctrl + /
+	//	e.method1(); //주석처리 ctrl + /
 	//	e.method2();
 		e.method3();
 	}
@@ -72,11 +72,11 @@ public class E_Logical {
 		 result = ((int)c >= 65 && (int)c <= 90);
 		System.out.println(result);
 	
-	//  강사님코드	
-	//	Scanner sc = new Scanner(System.in);
-	//	char ch = sc.nextLine().charAt(0);
-	//  System.out.println("사용자가 입력한 값이 대문자 입니까? : " + ((ch >= 'A') &&(ch <='Z'))); 	
-		
+	/*  강사님코드	
+		Scanner sc = new Scanner(System.in);
+		char ch = sc.nextLine().charAt(0);
+	    System.out.println("사용자가 입력한 값이 대문자 입니까? : " + ((ch >= 'A') &&(ch <='Z'))); 	
+		*/
 		
 	}
 }

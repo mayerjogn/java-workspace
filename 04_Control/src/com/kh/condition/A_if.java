@@ -191,19 +191,20 @@ public class A_if {
 			
 			  int score = 0;
 			  score = sc.nextInt();
-//			  if (score >= 90) {
-//			   grade = 'A';
-//			  else if(score< 90&& score >= 80){
+			  if (score >= 90) {
+			   grade = 'A'; }
+			  else if(score< 90&& score >= 80){
 			   grade = 'B';
-//			  }else if(score <80&& score >=70{
+			  }else if(score <80&& score >=70){
 			   grade = 'C';
-//			  }else if(score <70&& score >=60{
+			  }else if(score <70&& score >=60){
 			   grade = 'D';
-//			  }else{
-//			   grade = 'F'
-//					   System.out.println(grade);
+			  }else{
+			   grade = 'F';
+			    System.out.println(grade);
+			  }
 			  }		  
-			  
+		
 			  /*
 				 * 세 정수를 입력했을 때 짝수만 출력
 				 * num1 입력 > 3

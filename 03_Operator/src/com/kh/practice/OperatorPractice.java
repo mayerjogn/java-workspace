@@ -8,9 +8,9 @@ public class OperatorPractice {
 		OperatorPractice op =new OperatorPractice();
 	//	op.method1();
 	//	op.method2();
-		//op.method3();
+	//	op.method3();
 	//	op.method4();
-		//op.method5();
+	//	op.method5();
 	//	op.method6();
 	}
 	
@@ -58,32 +58,24 @@ public class OperatorPractice {
 	}
 	
 	public void method3() {
-		int a = 0;
-		int b = 0;
-		int c = 0;	
-		
+		int i = 0;	
+		int x = 0;
+		int z = 0;
+		boolean result = true;
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("입력1 : "  );
-		a = sc.nextInt();
+		i = sc.nextInt();
 		
 		System.out.print("입력2 : "  );
-		b = sc.nextInt();
+		x = sc.nextInt();
 		
 		System.out.print("입력3 : " );
-		c = sc.nextInt();
+		z = sc.nextInt();
 		
-		//boolean result = (a==b==c);
-	//	System.out.println(result);
-		
-		
-		 
-		
-		
-		
+		result = (i==x && x==z && i==z);
+		System.out.println(result);
 	}
-	
-	
 	
 	
 	public void method4() {
@@ -99,22 +91,15 @@ public class OperatorPractice {
 		
 	}
 	public void method5() {
-		int a = 0;
-		int b = 0;
-		int c = 0;
-		String result = "";
+		
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("나이 : " );
-		a = sc.nextInt();
+		int num = sc.nextInt();
 		
-		System.out.println("어린이");
-		b = sc.nextInt();
-				
-		System.out.println("청소년");
-		c = sc.nextInt();
+		String a =(num <=13)?"어린이" : (num <= 19) ? "청소년":"성인";
+		System.out.println(a);
 		
-		System.out.println("성인");
 				
 	}
 	public void method6() {

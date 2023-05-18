@@ -12,7 +12,7 @@ public class VariablePractice {
 		VariablePractice vp = new VariablePractice();
 	//	vp.method1();
 		vp.method2();
-		vp.method3();
+	//	vp.method3();
 	//	vp.method4();
 		
 
@@ -40,19 +40,20 @@ public class VariablePractice {
 
 
 	
-	public void method2() {
-		String name1 = "성인 2명 : ";
-		String name2 = "청소년 3명 : ";		
-		String name3 = "총 금액 : ";
+	public void method2() { //문제에 있는 비슷한 숫자로 연산하는 문제
+		String a = "성인 2명 : ";
+		String b = "청소년 3명 : ";		
+		String c = "총 금액 : ";
 		
-		int a = 20000;
-		int b = 21000;
-		int c = 41000;
-		
-		System.out.println(name1 + a + "원 \n"+ name2 + b + "원 \n\n" + name3 + c + "원\n");
+		int i = 20000;
+		int x = 21000;
+		int z = 41000;
+		System.out.println(a+i+"원");
+		System.out.println(b+x+"원");
+		System.out.println(c+z+"원");
 	}
 
-	public void method3() {		
+	public void method3() {	//임시 변수 하나 추가해서 해보기	
 		int x = 5;
 		int y = 7;
 		int z = 9;
@@ -67,9 +68,11 @@ public class VariablePractice {
 		
 		System.out.println("x=" + x);
 		System.out.println("y=" + y);
-		System.out.println("z=" + z+"\n");
-		//어떤 변수를 써야할지 잘모르겠어요
+		System.out.println("z=" + z);
 		
+		System.out.println("result1" + result1);
+		System.out.println("result2" + result2);
+		System.out.println("result3" + result3);
 	}
 
 	

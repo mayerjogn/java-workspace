@@ -73,9 +73,9 @@ public class C_For {
 	
 	public static void main(String[] args) {
 		C_For c = new C_For();
-	//	c.method1();
+		c.method1();
 	//	c.method2();
-		c.method3();
+	//	c.method3();
 		
 		
 	}

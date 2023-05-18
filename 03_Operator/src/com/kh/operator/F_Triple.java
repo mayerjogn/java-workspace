@@ -16,9 +16,9 @@ public class F_Triple {
 	public static void main(String[] args) {
 		
 		F_Triple f = new F_Triple();
-	//	f.method1();
+		f.method1();
 	//	f.practice1();
-		f.practice2();
+	//	f.practice2();
 	}
 	
 	public void method1() {
@@ -30,8 +30,8 @@ public class F_Triple {
 		number = sc.nextInt();
 		
 		// 입력받은 정수가 양수인지 음수인지 판단
-		result = (number > 0) ? "양수이다." : "음수이다.";
-		System.out.println(result);		
+	//	result = (number > 0) ? "양수이다." : "음수이다.";
+	//	System.out.println(result);		
 		
 		// 양수이다, 음수이다, 0이다
 		result = (number > 0) ? "양수이다." : (number < 0) ? "음수이다." : "0이다";
