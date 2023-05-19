@@ -116,16 +116,26 @@ public class ConditionPractice {
         축하합니다, 합격입니다!
      */
     public void practice4() {
+    	int score = 0 ;
     	
-    	System.out.print("국어 : ");
-		int a = sc.nextInt();
+    	System.out.print("국어점수 : ");
+		score = sc.nextInt();
+		if(score>=40) {
+			
+		}
 		
-		System.out.print("영어 : ");
-		int b = sc.nextInt();
-		
-		System.out.print("수학 : ");
-		int c = sc.nextInt();
-  
+		System.out.print("영어점수 : ");
+		score = sc.nextInt();
+		if(score>=40) {
+			
+		}
+			
+		System.out.print("수학점수 : ");
+		score = sc.nextInt();
+		if(score>=40) {
+			
+		}
+			
     }
 
     /*5
