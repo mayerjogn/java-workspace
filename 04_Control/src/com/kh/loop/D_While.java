@@ -111,20 +111,21 @@ public class D_While {
 	
 	
 	public void method5() {
-		
-		int input = 0;
-		input = sc.nextInt();
+				
 		double random = Math.random();
 		random = Math.random() *10;
 		int num = (int) random;
 		
+		
+		
 		do {
 			System.out.println("1과 100 사이의 값 입력");
-				
+			int input=0;
+			input=sc.nextInt();
 			
-		}
 		
-		while(input>num) {
+		
+		while() {
 			System.out.println("더 큰 수를 입력하세요.");
 		}
 		 
