@@ -278,18 +278,32 @@ public class C_For {
 			 *     i=4, x=2, x=3, x=4, x=5
 			 *     i=5, x=1,x=2, x=3, x=4, x=5
 			 * */
-			public void method16() {
-				for(int i=1; i<=5; i++) {
-					for(int j=5; j>=1; j--) {
-						if(i<j) {
-							System.out.println(" ");
-						}else {
-								System.out.print("*");				
-						}
-					}
-					System.out.println();
-				}
-			}		
+ public void method16() {
+	for(int i=1; i<=5; i++) {
+		for(int j=5; j>=1; j--) {
+			if(i<j) {
+				System.out.println(" ");
+			}else {
+				System.out.print("*");					
+			}						
+		}
+		System.out.println();					
+	}				
+}	
+ 
+ public void method17() {
+	    for(int i = 1; i <= 5; i++) {
+	        for(int j = 1; j <= 5; j++) {
+	            if(j <= 5 - i) {
+	                System.out.print(" ");
+	            } else {
+	                System.out.print("*");
+	            }
+	        }
+	        System.out.println();
+	    }
+	}
+
 	public static void main(String[] args) {
 		C_For c = new C_For();
 	//	c.method1();
@@ -307,7 +321,8 @@ public class C_For {
 	//	c.method13();
 	//	c.method14();
 	//	c.method15();
-		c.method16();
+	//	c.method16();
+		c.method17();
 	}
 
 }

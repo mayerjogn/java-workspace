@@ -91,6 +91,7 @@ public class D_While {
 	} while(number == 1); 
 		
 	}
+
 	/*
 	 *  반복문 + 조건문
 	 * 
@@ -124,7 +125,7 @@ public class D_While {
 			
 		}
 		
-		while(input>num) {
+		while(input>num); {
 			System.out.println("더 큰 수를 입력하세요.");
 		}
 		 
@@ -132,18 +133,7 @@ public class D_While {
 		 }
 		
 			
-				
 					
-			
-				
-				
-	
-
-			
-		
-		
-		
-	
 	public static void main(String[] args) {
 			D_While d= new D_While();
 //			d.method1();

@@ -79,19 +79,20 @@ public class ConditionPractice {
      */
     public void practice3() {
     	   	
-    	System.out.println("피자 조각 수 : ");
+    	System.out.print("피자 조각 수 : ");
     	int a =sc.nextInt();
     	   	
-    	System.out.println("피자 먹는 사람 수 : ");
+    	System.out.print("피자 먹는 사람 수 : ");
     	int b = sc.nextInt();
     	
-    	int c = a / b ;
-    		if(a % b != 0) {
-    			c ++;
-    		}
-       		System.out.println(c);
-    		} 		
-    	        	
+    	int c = a/b ;                            //a/b ;
+    		if(c!=0) {
+    			c++;       		
+    		} 	
+    	if(c!=1) {
+    		System.out.println(c);
+    	}
+    }    	
     	  
     /*4 
         국어, 영어, 수학 세 과목의 점수를 키보드로 입력 받고 합계와 평균을 계산하고
@@ -116,27 +117,28 @@ public class ConditionPractice {
         축하합니다, 합격입니다!
      */
     public void practice4() {
-    	int score = 0 ;
-    	
-    	System.out.print("국어점수 : ");
-		score = sc.nextInt();
-		if(score>=40) {
-			
-		}
+    	int a = 0 ;
+    	int b = 0 ;
+    	int c = 0 ;
+    	System.out.print("국어 점수 : ");
+		a = sc.nextInt();
+    	System.out.print("수학 점수 : ");
+    	b = sc.nextInt();
+    	System.out.print("영어 점수 : ");
+    	c = sc.nextInt();
+		if((a+b+c)/3>=60 && (a+b+c)>=40 ) {
+			int d=a+b+c;
+			float e=d/3;
+			System.out.println("합계 : "+d);
+			System.out.println("평균 : "+e);
+			System.out.print("축하합니다, 합격입니다!");
 		
-		System.out.print("영어점수 : ");
-		score = sc.nextInt();
-		if(score>=40) {
-			
+		}else {
+			System.out.println("불합격입니다.");
+		}
 		}
 			
-		System.out.print("수학점수 : ");
-		score = sc.nextInt();
-		if(score>=40) {
-			
-		}
-			
-    }
+    
 
     /*5
         B 옷가게는 10만 원 이상 사면 5%, 30만 원 이상 사면 10%, 50만원 이상 사면 20%를 할인해준다.
@@ -145,8 +147,15 @@ public class ConditionPractice {
         구매한 옷 가격 : 580,000
         464,000
      */
-    public void practice5() {
-
+    public void practice5() {    	
+    	int a=0;
+    	    	
+    	System.out.print("구매한 옷 가격 : ");
+    		a = sc.nextInt();
+    	 if(a>=(500000)){
+    		 int price=(int) (a*0.8);
+    		 System.out.printf("지불해야 할 금액 : %,d",  price); //어떻게 464,000로 출력되긴했는데 아직도 printf가 좀 헷갈려요 %,d로 천 단위에 딱,이 찍힌건지 모르겠어요
+    	 }    	 
     }
 
 
@@ -155,9 +164,22 @@ public class ConditionPractice {
         입력받은 각에 따라 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 출력하세요.
      */
     public void practice6() {
-
+    	System.out.print("각도를 입력하세요 >  ");
+		int num=sc.nextInt();
+		
+       	if((num>0)&&((num<90))) {
+       		System.out.print("1");       	           		
+       	}
+   	   	 if(num==90) {
+   	   		 System.out.print("2");
+   	   	 }
+   	   	 if((num>90)&&((num<180))) {
+   	   		 System.out.print("3");
+   	   	 }
+   	   	 if(num==180) {
+   	   		 System.out.print("4");
+   	   	 }
     }
-
 
     /*7
       아이디, 비밀번호를 정해두고 로그인 기능을 작성하세요.
@@ -177,9 +199,41 @@ public class ConditionPractice {
       비밀번호 : 1234
       아이디가 틀렸습니다.
     */
-    public void practice7() {
- 
+    public void practice7() {   	
+    	System.out.print("아이디 : ");
+    	String id="happy";
+    	id = sc.nextLine();
+    	
+    	System.out.print("비밀번호 : ");
+    	int pw = 1234;
+    	pw = sc.nextInt();
+    	
+    	if("happy".equals(id)&& pw==1234) {
+    		System.out.print("로그인 성공!");
+    	
+    	}else if(!"happy".equals(id)) {
+    		System.out.print("아이디가 틀렸습니다");
+    	  		
+    	}else if(pw!=1234){
+    		System.out.print("비밀번호가 틀렸습니다");
+    	}
+    	
     }
+    	    	
+//    	System.out.print("아이디 : ");
+//    	String id="happy";    	
+//    	id = sc.nextLine();    	
+//    	int pw = 1234;
+//
+//    	
+//    	if("happy".equals(id)) { 
+//    		System.out.print("비밀번호 : ");
+//    		 pw = sc.nextInt();
+//    	  }else if(pw!=1234) {
+//    		 System.out.println("비밀번호가 틀렸습니다." );     		    		   			    		
+//    	}   	
+//    	
+//    }
 
     /*8
         키, 몸무게를 double로 입력 받고 BMI지수를 계산하여 계산 결과에 따라
@@ -281,17 +335,17 @@ public class ConditionPractice {
     }
 public static void main(String[] args) {
 	ConditionPractice c= new ConditionPractice();
-	//c.practice1(); o
-	//c.practice2(); o
-	//c.practice3(); x
-	c.practice4(); 
-//	c.practice5(); x
-//	c.practice6(); x
-//	c.practice7(); x
-//	c.practice8(); x
-//	c.practice9(); x
-//	c.practice10(); x
-//	c.practice11(); x
+	//c.practice1(); //o
+	//c.practice2(); //o
+	//c.practice3(); //x
+	//c.practice4(); //o
+	//c.practice5(); //o
+	//c.practice6(); //o
+	c.practice7(); //
+//	c.practice8(); //x
+//	c.practice9(); //x
+//	c.practice10(); //x
+//	c.practice11(); //x
 	
 	}
     

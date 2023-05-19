@@ -9,7 +9,7 @@ public class CastingPractice {
 		CastingPractice cp = new CastingPractice();
 		
 	//	cp.method1();
-		cp.method2();
+	//	cp.method2();
 		
 	}
 	public void method1() {
