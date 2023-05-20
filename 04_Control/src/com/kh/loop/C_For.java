@@ -202,49 +202,49 @@ public class C_For {
 		}
 	}
 		//2~9 단 전부 출력
-		public void method12(){
-			for(int j=2; j<10; j++) {						
-				for(int i=1; i<10; i++)	{		
-					System.out.println(j+" X "+ i + "=" + j*i);
-				}
+	public void method12(){
+		for(int j=2; j<10; j++) {						
+			for(int i=1; i<10; i++)	{		
+				System.out.println(j+" X "+ i + "=" + j*i);
+			}
 			
-			}		
-		}
+		}		
+	}
 		
 		/*		******
 		 * 		******
 		 * 		******
 		 * 		******
 		 * */
-		public void method13() {
-			for(int i=0; i<4; i++) {
+	public void method13() {
+		for(int i=0; i<4; i++) {
 							
-			for(int j=0 ; j<5; j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-			}
+		for(int j=0 ; j<5; j++) {
+			System.out.print("*");
+		}
+		System.out.println();
+		}
 							
-		}	
+	}	
 				/*
 				 * 1*** : i=0, j=0
 				 * *2** : i=1, j=1
 				 * **3* : i=2, j=2
 				 * ***4 : i=3, j=3
 				 * */	
-			public void method14() {
-				for(int i=0 ; i<4 ; i++) {
-					for(int x=0; x<4; x++) {
-						if(i==x) {
-							System.out.print(i+1);
-						}else {
-						System.out.print("*");
-					}
-					}
-				System.out.println();	
-					}
-				
+	public void method14() {
+		for(int i=0 ; i<4 ; i++) {
+			for(int x=0; x<4; x++) {
+				if(i==x) {
+					System.out.print(i+1);
+				}else {
+				System.out.print("*");
 			}
+		}
+		System.out.println();	
+			}
+				
+		}
 			/*
 			 * *
 			 * **
@@ -258,14 +258,14 @@ public class C_For {
 			 * i=4, x=1, x=2, x=3, x=4
 			 * i=5, x=1, x=2, x=3, x=4, x=5 
 			 * */
-			public void method15() {
-				for(int i=1; i<=5 ; i++) {
-					for(int x=1 ; x<=i ; x++) {																		
-						System.out.print("*");
-						if(i==x) System.out.println();
-					}
-				}
-			}						
+	public void method15() {
+		for(int i=1; i<=5 ; i++) {
+			for(int x=1 ; x<=i ; x++) {																		
+			  System.out.print("*");
+				if(i==x) System.out.println();
+			}
+		}
+	}						
 			/*
 			 * 		 *
 			 *		** 	
@@ -278,20 +278,20 @@ public class C_For {
 			 *     i=4, x=2, x=3, x=4, x=5
 			 *     i=5, x=1,x=2, x=3, x=4, x=5
 			 * */
- public void method16() {
-	for(int i=1; i<=5; i++) {
-		for(int j=5; j>=1; j--) {
-			if(i<j) {
-				System.out.println(" ");
-			}else {
-				System.out.print("*");					
-			}						
-		}
-		System.out.println();					
-	}				
-}	
+	public void method16() {
+	   for(int i=1; i<=5; i++) {
+		   for(int j=5; j>=1; j--) {
+			  if(i<j) {
+				  System.out.println(" ");
+			     }else {
+			   	   System.out.print("*");					
+		   	    }  						
+		     }
+		     System.out.println();					
+	      }				
+       }	
  
- public void method17() {
+     public void method17() {
 	    for(int i = 1; i <= 5; i++) {
 	        for(int j = 1; j <= 5; j++) {
 	            if(j <= 5 - i) {

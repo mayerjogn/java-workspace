@@ -232,7 +232,8 @@ public class ConditionPractice {
 //    	  }else if(pw!=1234) {
 //    		 System.out.println("비밀번호가 틀렸습니다." );     		    		   			    		
 //    	}   	
-//    	
+//    	}else if(id!="happy") {
+//			System.out.print("아이디가 틀렸습니다");
 //    }
 
     /*8
@@ -250,7 +251,34 @@ public class ConditionPractice {
 
      */
     public void practice8() {
-       
+    	
+    	double num1 = 0;
+    	
+    	double num2 = 0;
+    	      	
+    	
+    	System.out.print("키(m)를 입력해 주세요 : ");
+    	
+    	 num1 = sc.nextDouble();
+    			
+    	System.out.print("몸무게(kg)를 입력해 주세요 :");
+    	 num2 = sc.nextDouble();
+    	 
+    	 double num3 = (num2/(num1*num1));   	
+    	 
+    	 if(num3<18.5)  {    		 
+    		 System.out.print("BMI 지수 : " + num3 + "\n저체중" ) ;  		 
+    	 }else if (num3>=18.5 && num3<23){
+    		 System.out.print("BMI 지수 : " + num3 + "\n정상체중" ) ;
+    	 }else if(num3>=23 && num3<25) {
+    		 System.out.print("BMI 지수 : " + num3 + "\n과체중" ) ;
+    	 }else if(num3>=25 && num3<30) {
+    		 System.out.print("BMI 지수 : " + num3 + "\n비만" ) ;
+    	 
+    	 }else if(num3>30) {
+    		  System.out.print("BMI 지수 : " + num3 + "\n고도비만" ) ;
+    	 }
+    	 
     }
 
     /*9
@@ -265,6 +293,13 @@ public class ConditionPractice {
 
      */
     public void practice9() {
+    	System.out.print("피연산자1 입력 : ");
+    	int x = 0;
+    	x = sc.nextInt();
+    	
+    	System.out.print("피연산자2 입력 : ");
+    	int y = 0;
+    	y = sc.nextInt();
 
     }
 
@@ -341,9 +376,9 @@ public static void main(String[] args) {
 	//c.practice4(); //o
 	//c.practice5(); //o
 	//c.practice6(); //o
-	c.practice7(); //
-//	c.practice8(); //x
-//	c.practice9(); //x
+	//c.practice7(); //o
+	//c.practice8(); //o
+	c.practice9(); //x
 //	c.practice10(); //x
 //	c.practice11(); //x
 	
