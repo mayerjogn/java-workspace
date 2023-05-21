@@ -34,14 +34,15 @@ public class test {
         	System.out.println("총점 : "+(a+b+c+s4));
         	System.out.println("PASS");
         	
-        }else if((x < 70)&&(s4>=20)){ 
+        }else if(x < 70&&s4>=20){ 
           	 System.out.println("FAIL[점수 미달]"+(a+b+c+s4));
         }else if(s4<20){
-        	 System.out.println("FAIL[출석횟수 부족]" + s4 );
-        	
-	}
-
-	}
+        	System.out.println("FAIL[출석횟수 부족]" + s4 ); 
+        		}
+        else {
+        	System.out.print("FAIL[점수 미달]"+(a+b+c+s4)+"\n"+"FAIL[출석횟수 부족]" + s4);
+        }
+        	}
 }
 	
 
