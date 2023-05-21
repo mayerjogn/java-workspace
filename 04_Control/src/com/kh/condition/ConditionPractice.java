@@ -292,17 +292,47 @@ public class ConditionPractice {
         15 / 4 = 3
 
      */
-    public void practice9() {
-    	System.out.print("피연산자1 입력 : ");
+    public void practice9() {    	    	
+    	System.out.print("피연산자1 입력 : ");  
     	int x = 0;
     	x = sc.nextInt();
     	
-    	System.out.print("피연산자2 입력 : ");
+    	System.out.print("피연산자2 입력 : ");  
     	int y = 0;
     	y = sc.nextInt();
-
+    	
+    	char ch = ' ';
+    	System.out.print("연산자 입력 : "  );
+    	sc.next().charAt(0);
+            	
+    	switch(ch) {
+    	case '+':
+    		int a = x+y;
+    		System.out.print(x+'+'+y+"="+a);
+    		break;
+    	case '-':
+    		int b = x-y;
+    		System.out.print(x+'-'+y+"="+b);
+    		break;
+    	case '*':
+    		int c = x*y;
+    		System.out.print(x+'*'+y+"="+c);
+    	case '/':
+    		int d = x/y;
+    		System.out.print(x+'/'+y+"="+d);
+    		break;
+    	case'%':
+    		int e = x%y;
+    		System.out.print(x+'%'+y+"="+e);
+    	default	:
+    		System.out.print("잘못입력하셨습니다, 프로그램을 종료합니다.");
+    		
+    	}
     }
+        	
 
+
+    
     /*10
       아래 예시와 같이 메뉴를 출력하고 메뉴 번호를 누르면 “OO메뉴입니다“를,
       종료 번호를 누르면 “프로그램이 종료됩니다.”를 출력하세요
@@ -316,6 +346,26 @@ public class ConditionPractice {
         조회 메뉴입니다.
      */
     public void practice10() {
+    	System.out.print("메뉴 번호를 입력하세요 : ");
+       	int num = sc.nextInt();
+       	
+    	switch(num) {
+    	case 1 :
+    		System.out.print("입력메뉴입니다.");
+    		break;
+    	case 2 :
+    		System.out.print("수정메뉴입니다.");
+    		break;
+    	case 3:
+    		System.out.print("조회메뉴입니다.");
+    		break;
+    	case 4:
+    		System.out.print("삭제메뉴입니다.");
+    		break;
+    	case 9:
+    		System.out.print("프로그램이 종료됩니다.");
+    	}
+    	
 
     }
 
@@ -366,8 +416,42 @@ public class ConditionPractice {
 
      */
     public void practice11() {
+    	
+    	System.out.print("중간 고사 점수 : ");
+    	int s1 = sc.nextInt();
+    	System.out.print("기말 고사 점수 : ");
+    	int s2 = sc.nextInt();
+    	System.out.print("과제 점수 : ");
+    	int s3 = sc.nextInt();
+    	System.out.print("출석 회수 : ");
+        int s4 = sc.nextInt();
+                       
+        double a = s1*0.2;
         
-    }
+        double b = s2*0.3;
+        
+        double c = s3*0.3;
+        
+        double d = s4%30;
+        
+        double x = a+b+c+d;
+        
+        System.out.println("=======결과======");	        	
+        if(x >= 70 && s4 >= d){        	
+        	System.out.println("중간 고사 점수(20) : " + a);        	        	
+        	System.out.println("기말 고사 점수(30) : " + b);         	         	 
+        	System.out.println("과제 점수(30) : " + c);        	       	 
+        	System.out.println("출석 점수(20) : " + d);
+        	System.out.println("총점 : "+(a+b+c+d));
+        	System.out.println("PASS");
+        	
+        }else if((x < 70)&&(s4>=d)){ 
+          	 System.out.println("FAIL[점수 미달]"+(a+b+c+d));
+         }
+        	
+        }	
+        
+    
 public static void main(String[] args) {
 	ConditionPractice c= new ConditionPractice();
 	//c.practice1(); //o
@@ -378,9 +462,9 @@ public static void main(String[] args) {
 	//c.practice6(); //o
 	//c.practice7(); //o
 	//c.practice8(); //o
-	c.practice9(); //x
-//	c.practice10(); //x
-//	c.practice11(); //x
+	//c.practice9(); //x
+	//c.practice10();//ㅐ
+	c.practice11(); //x
 	
 	}
     
