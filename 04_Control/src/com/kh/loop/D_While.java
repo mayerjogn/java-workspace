@@ -28,7 +28,7 @@ public class D_While {
 	}
 	/*
 	 * break문
-	 * - switch, 반북문의 실행을 중지하고 빠져나갈 때 사용
+	 * - switch, 반복문의 실행을 중지하고 빠져나갈 때 사용
 	 * - 반복문이 중첩되는 경우 break문이 포함되어 있는 반복문에서만 빠져나간다.
 	 * */
 	
@@ -91,6 +91,7 @@ public class D_While {
 	} while(number == 1); 
 		
 	}
+
 	/*
 	 *  반복문 + 조건문
 	 * 
@@ -124,8 +125,12 @@ public class D_While {
 			input=sc.nextInt();
 			
 		
+<<<<<<< HEAD
 		
 		while() {
+=======
+		while(input>num); {
+>>>>>>> d180ee49b6194879ebcef5f62a2f8722aa4b064b
 			System.out.println("더 큰 수를 입력하세요.");
 		}
 		 
@@ -133,18 +138,7 @@ public class D_While {
 		 }
 		
 			
-				
 					
-			
-				
-				
-	
-
-			
-		
-		
-		
-	
 	public static void main(String[] args) {
 			D_While d= new D_While();
 //			d.method1();
