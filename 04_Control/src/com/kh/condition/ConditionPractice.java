@@ -446,7 +446,10 @@ public class ConditionPractice {
         	System.out.println("PASS");
         	
         }else if((x < 70)&&(s4>=d)){ 
-          	 System.out.println("FAIL[점수 미달]"+(a+b+c+d));
+          	 System.out.println("FAIL[점수 미달]"+" (총점"+(a+b+c+d)+")" );
+//         }else if(s4<d){
+//        	 System.out.println("FAIL[출석 횟수부족]"+ (s4/20));
+        	 
          }
         	
         }	
@@ -463,7 +466,7 @@ public static void main(String[] args) {
 	//c.practice7(); //o
 	//c.practice8(); //o
 	//c.practice9(); //x
-	//c.practice10();//ㅐ
+	//c.practice10();//o
 	c.practice11(); //x
 	
 	}

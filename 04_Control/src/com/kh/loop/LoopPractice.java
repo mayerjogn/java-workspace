@@ -12,6 +12,9 @@ class LoopPractice {
         1
      */
     public void method1() {
+    	System.out.print("사용자 입력 : ");
+    //	int 0; = sc.nextInt();
+    	
 
     }
 

@@ -73,7 +73,7 @@ public class OperatorPractice {
 		System.out.print("입력3 : " );
 		z = sc.nextInt();
 		
-		result = (i==x && x==z && i==z);
+		result = (i==x && x==z );
 		System.out.println(result);
 	}
 	
