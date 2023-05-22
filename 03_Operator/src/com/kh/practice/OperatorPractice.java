@@ -10,7 +10,7 @@ public class OperatorPractice {
 	//	op.method2();
 	//	op.method3();
 	//	op.method4();
-	//	op.method5();
+	//	op.method5(); o
 	//	op.method6();
 	}
 	

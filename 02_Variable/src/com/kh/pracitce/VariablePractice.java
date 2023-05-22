@@ -45,11 +45,11 @@ public class VariablePractice {
 		String b = "청소년 3명 : ";		
 		String c = "총 금액 : ";
 		
-		int i = 20000;
-		int x = 21000;
-		int z = 41000;
-		System.out.println(a+i+"원");
-		System.out.println(b+x+"원");
+		int i = 10000;
+		int x = 7000;
+		int z = (i*2)+(x*3);
+		System.out.println(a+(i*2)+"원");
+		System.out.println(b+(x*3)+"원");
 		System.out.println(c+z+"원");
 	}
 
@@ -57,22 +57,15 @@ public class VariablePractice {
 		int x = 5;
 		int y = 7;
 		int z = 9;
+					
+		int result1 = x;
+		int result2 = y;
+		int result3 = z;
 		
-		int num1 =7;
-		int num2 =9;
-		int num3 =5;
-		
-		int result1 = x=7;
-		int result2 = y=9;
-		int result3 = z=5;
-		
-		System.out.println("x=" + x);
-		System.out.println("y=" + y);
-		System.out.println("z=" + z);
-		
-		System.out.println("result1" + result1);
-		System.out.println("result2" + result2);
-		System.out.println("result3" + result3);
+		System.out.println("x=" + result1);
+		System.out.println("y=" + result2);
+		System.out.println("z=" + result3);
+	
 	}
 
 	

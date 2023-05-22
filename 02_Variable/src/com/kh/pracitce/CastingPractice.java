@@ -8,7 +8,7 @@ public class CastingPractice {
 		
 		CastingPractice cp = new CastingPractice();
 		
-	//	cp.method1();
+		cp.method1();
 	//	cp.method2();
 		
 	}
