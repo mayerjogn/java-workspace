@@ -68,8 +68,8 @@ public class ArrayPractice {
 			System.out.print("정수 입력 > ");
 			String food1=sc.nextLine();
 			
-			
-			
+		//	Arrays.toString 이거써보셈
+		
 		}
 		
 		
