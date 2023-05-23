@@ -18,7 +18,7 @@ public class User {
 	public void signup() {// 회원가입
 		
 	}
-	public void vewProfile() {// 프로필 보기
+	public void viewProfile() {// 프로필 보기
 		
 	}
 	public void updateProfile()	{// 프로필 수정
