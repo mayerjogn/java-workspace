@@ -8,8 +8,8 @@ class LoopPractice {
 	//	l.method1();  //o
 	//	l.method2(); //x
 	//	l.method3(); //o
-	//	l.method4(); //
-		l.method5();//
+		l.method4(); //
+	//	l.method5();//
 	//	l.method6();//
 	}
 	Scanner sc = new Scanner(System.in);
