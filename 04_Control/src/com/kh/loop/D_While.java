@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class D_While {
 	Scanner sc = new Scanner(System.in);
-
+		
 	/*
 	 * while문
 	 * 

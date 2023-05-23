@@ -314,7 +314,7 @@ public class C_For {
 	//	c.method6();
 	//  c.method7();
 	//  c.method8();
-	//	c.method9();
+		c.method9();
 	//	c.method10();
 	//	c.method11();
 	//	c.method12();
@@ -322,7 +322,7 @@ public class C_For {
 	//	c.method14();
 	//	c.method15();
 	//	c.method16();
-		c.method17();
+	//	c.method17();
 	}
 
 }

@@ -1,6 +1,18 @@
 package com.kh.loop;
+import java.util.Scanner;
 
 class LoopPractice {
+	public static void main(String[] args) {
+		LoopPractice l = new LoopPractice();
+		
+	//	l.method1();  //o
+	//	l.method2(); //x
+	//	l.method3(); //o
+	//	l.method4(); //
+		l.method5();//
+	//	l.method6();//
+	}
+	Scanner sc = new Scanner(System.in);
  
     /*
         사용자로부터 숫자(1~100) 1개가 입력되었을 때 카운트다운 출력하시오.
@@ -12,14 +24,24 @@ class LoopPractice {
         1
      */
     public void method1() {
-    	System.out.print("사용자 입력 : ");
-    //	int 0; = sc.nextInt();
+    	System.out.print("숫자 입력 : ");
+    	int num  = sc.nextInt();    	
+    	if(num >= 1 && num<= 100) {
+    	    for(int i=num; i>=1; i--) {
+    	    	System.out.println(i);
+    	    }
     	
-
+       	
+    	}
     }
 
     // 1+(-2)+3+(-4)+...과 같은 식으로 계속 더해나갔을 때, 몇까지 더해야 총합이 100 이상 되는지 출력하시오.
     public void method2() {
+    	int sum = 0;
+    	for(int i=1; i<=100; i++) {
+    		sum+=i;
+    		System.out.println(i+sum);
+    	}
 
     }
 
@@ -32,6 +54,20 @@ class LoopPractice {
 
     */
     public void method3() {
+    	System.out.print("문자열 : ");
+    	String str=sc.nextLine();
+    	System.out.print("문자 : ");
+    	char ch=sc.next().charAt(0);
+    	
+    	int a=0;
+    	
+    	for(int i =0; i<str.length(); i++) {
+    		if(str.charAt(i)==ch) {
+    			a++;  //풀긴했는데 이부분이 왜들어가는지 잘모르겠습니다
+    		}
+    		
+    	}
+    	System.out.println(str+"안에 포함된 " + ch + "개수 " + a );
 
     }
 
@@ -46,6 +82,16 @@ class LoopPractice {
         0
      */
     public void method4() {
+    	
+    	int num = (int) Math.random()*10;
+    	while(true) {
+    		if(num==0) {
+    			System.out.print(num);
+    		}
+    		
+    	}
+    	
+    	
 
     }
 
