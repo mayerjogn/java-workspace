@@ -197,7 +197,7 @@ public class A_Array {
 		System.out.println(Arrays.toString(number));
 		System.out.println(Arrays.toString(copy));
 	}
-	
+	//(Arrays.toString(arr))= 배열 전부를 꺼낼때
 	/*
 	 * 3) Arrays 클래스에서 제공하는 copyOf() 메소드를 이용한 깊은 복사
 	 * 
