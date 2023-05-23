@@ -11,8 +11,8 @@ public class VariablePractice {
 	
 		VariablePractice vp = new VariablePractice();
 	//	vp.method1();
-		vp.method2();
-	//	vp.method3();
+	//	vp.method2();
+		vp.method3();
 	//	vp.method4();
 		
 
@@ -56,15 +56,16 @@ public class VariablePractice {
 	public void method3() {	//임시 변수 하나 추가해서 해보기	
 		int x = 5;
 		int y = 7;
-		int z = 9;
-					
-		int result1 = x;
-		int result2 = y;
-		int result3 = z;
+		int z = 9;		
+		int temp=0;
 		
-		System.out.println("x=" + result1);
-		System.out.println("y=" + result2);
-		System.out.println("z=" + result3);
+		temp = x;
+		x = y;
+		y = z;
+		z = temp;
+		System.out.println("x=" + x);
+		System.out.println("y=" + y );
+		System.out.println("z=" + z);
 	
 	}
 
