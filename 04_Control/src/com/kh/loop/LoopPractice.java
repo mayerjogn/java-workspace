@@ -83,17 +83,26 @@ class LoopPractice {
      */
     public void method4() {
     	
-    	int num = (int) Math.random()*10;
-    	while(true) {
-    		if(num==0) {
-    			System.out.print(num);
-    		}
-    		
-    	}
-    	
-    	
+		int num = (int) Math.random() * 10;
+		int input =0;
+		while(true)
+		for (int i = 1;  ; i++) {
+			if(i==0)
+				i++;
+				System.out.print(i);
+				
+				
+				break;
 
-    }
+			}
+			
+		}
+    
+			
+
+		
+
+	
 
     /*
         주사위를 10번 굴렸을 때 각 눈의 수가 몇 번 나왔는지 출력하세요. (random 사용!)

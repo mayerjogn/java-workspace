@@ -1,28 +1,31 @@
 package mull.model;
 
 public class Home {
-	
+
+	public String post;
 	public String search;
 	public String market;
 	public String review;
 	public String job;
-	
-	
-	public void uploadPost() {
 
+	public Home uploadPost() {
+		return null;
 	}
-	public void updatePost() {
-		
+
+	public Home updatePost() {
+		return null;
 	}
-	public void deletePost() {
-		
+
+	public boolean deletePost() {
+		return false;
 	}
-	public void viewMarket() {
-		
+
+	public Home viewMarket() {
+		return null;
 	}
-	public void instReview() {
-		
+
+	public Home instReview() {
+		return null;
 	}
-	
-	
+
 }

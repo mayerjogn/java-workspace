@@ -32,7 +32,7 @@ public class D_While {
 	// for문 무한루프
 //	public void method2() {
 //		
-//		for(int i=1; i<=5;) {// <=무한루프
+//		for(int i=1; ;i<=5;) {// <=무한루프
 //			System.out.println(i);
 //			i++; //<=해결방법
 //		}
@@ -235,7 +235,7 @@ public class D_While {
 //			d.method3();
 //			d.method4();
 //			d.method5();
-		d.method6();
+			d.method6();
 	}
 
 }
