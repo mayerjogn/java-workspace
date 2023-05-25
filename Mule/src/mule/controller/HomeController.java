@@ -1,6 +1,6 @@
-package mullcontroller;
+package mule.controller;
 
-import mull.model.Home;
+import mule.model.Home;
 
 public class HomeController {
 

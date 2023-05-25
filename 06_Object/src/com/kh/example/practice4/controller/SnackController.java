@@ -16,7 +16,7 @@ public class SnackController {
 	public SnackController() {}
 	
 	// 데이터를 setter를 이용해 저장하고 저장 되었다는 
-	//결과를 반환하는 메서드
+	// 결과를 반환하는 메서드
 	
 	public boolean saveDate(Snack s) {
 		

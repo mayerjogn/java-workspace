@@ -1,6 +1,6 @@
-package mullcontroller;
+package mule.controller;
 
-import mull.model.User;
+import mule.model.User;
 
 public class UserController {
 

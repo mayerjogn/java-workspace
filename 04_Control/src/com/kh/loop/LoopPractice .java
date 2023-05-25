@@ -10,8 +10,8 @@ class LoopPractice {
 	//	l.method2(); //x
 	//	l.method3(); //o
 	//	l.method4(); //흠..
-		l.method5();//
-	//	l.method6();//
+	//	l.method5();//
+		l.method6();//
 	}
 	Scanner sc = new Scanner(System.in);
  

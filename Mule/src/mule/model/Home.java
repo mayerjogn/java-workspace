@@ -1,4 +1,4 @@
-package mull.model;
+package mule.model;
 
 public class Home {
 

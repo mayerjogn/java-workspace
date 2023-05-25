@@ -49,12 +49,12 @@ public class Book {
 		this.author = author;
 	}
 	
-	// setter/getter
+	// getter/setter
 	// 값을 넣을때/값을 빼올때
 	public String getTitle() {//getter 빼올때
 		return title;
 	}
-	public void setTitle(String title) {//setter 나올때
+	public void setTitle(String title) {//setter 넣을때
 		this.title = title;
 	}
 	public int getPrice() {
