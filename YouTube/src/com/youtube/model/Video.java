@@ -1,38 +1,78 @@
 package com.youtube.model;
 
 import java.util.Date;
-
+//alt + shift + s
 public class Video {
-
-	public String title;
-	public String comment;
-	public Date uploadAt;
-	public int views; //count;
-	public String imgurl;
-	public String fileurl;
-	
-	/*
+/*
 	 * Create : 추가
 	 * Read : 읽기 (1개, 목록)
 	 * Update : 수정
 	 * Delete : 삭제
 	 * */
-	public Video upload() {// 영상 업로드	
-		return null;
+	private String title;
+	private String comment;
+	private Date uploadAt;
+	private int views; //count;
+	private String imgurl;
+	private String fileurl;
+	public Video() {
 	}
-	public Video[] viedoList() {// 영상 목록
-		return null;
+	public Video(String title, String comment, Date uploadAt, int views, String imgurl, String fileurl) {
+		this.title = title;
+		this.comment = comment;
+		this.uploadAt = uploadAt;
+		this.views = views;
+		this.imgurl = imgurl;
+		this.fileurl = fileurl;
 	}
-	public Video viewVideo() {// 영상 1개 보기
-		return null;
+	public String getTitle() {
+		return title;
 	}
-	public Video updateVideo() {// 동영상 수정	
-		return null;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	public boolean deleteVideo() {	// 동영상 삭제
-		return false;
+	public String getComment() {
+		return comment;
 	}
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+	public Date getUploadAt() {
+		return uploadAt;
+	}
+	public void setUploadAt(Date uploadAt) {
+		this.uploadAt = uploadAt;
+	}
+	public int getViews() {
+		return views;
+	}
+	public void setViews(int views) {
+		this.views = views;
+	}
+	public String getImgurl() {
+		return imgurl;
+	}
+	public void setImgurl(String imgurl) {
+		this.imgurl = imgurl;
+	}
+	public String getFileurl() {
+		return fileurl;
+	}
+	public void setFileurl(String fileurl) {
+		this.fileurl = fileurl;
+	}
+	@Override
+	public String toString() {
+		return "Video [title=" + title + ", comment=" + comment + ", uploadAt=" + uploadAt + ", views=" + views
+				+ ", imgurl=" + imgurl + ", fileurl=" + fileurl + "]";
+	}
+	
+	
+	
+	}
+	
+	
 		
 	
 
-}
+

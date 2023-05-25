@@ -1,4 +1,5 @@
 package com.kh.loop;
+import java.util.Random;
 import java.util.Scanner;
 
 class LoopPractice {
@@ -8,8 +9,8 @@ class LoopPractice {
 	//	l.method1();  //o
 	//	l.method2(); //x
 	//	l.method3(); //o
-		l.method4(); //
-	//	l.method5();//
+	//	l.method4(); //흠..
+		l.method5();//
 	//	l.method6();//
 	}
 	Scanner sc = new Scanner(System.in);
@@ -81,26 +82,18 @@ class LoopPractice {
         4
         0
      */
-    public void method4() {
-    	
-		int num = (int) Math.random() * 10;
-		int input =0;
-		while(true)
-		for (int i = 1;  ; i++) {
-			if(i==0)
-				i++;
-				System.out.print(i);
-				
-				
+	public void method4() {
+
+		for (;;) {// 이 부분이 한개나 두개만 안넣으면 왜 안되는지 왜 다비워놔야되는지 모르겠어요
+			int num = (int) (Math.random() * 10);
+			System.out.println(num);
+			if (num == 0) {
 				break;
-
 			}
-			
-		}
-    
-			
 
-		
+		} // 0만 나올때도있는게 맞는건지 모르겠어요
+	}// 반복문 넘어지럽습니다..
+    
 
 	
 
@@ -116,8 +109,28 @@ class LoopPractice {
 
      */
     public void method5() {
+  //  	System.out.print("주사위 굴리기 : ");
+  //  	int num=sc.nextInt();
+    	int r = (int)(Math.random()*10+1);
+    	for(int i=1;i<=6 ;i++) {
+    	int num = (int)(Math.random()*6+1);
+    	int num2 = (int)(Math.random()*6+1);
+//흠...    		if(r ==) {
+    		System.out.println(num+" : "+num2);
+    		
+    		
+    //		break;
+    		}
+    	}
+    
+    	//	int r = (int)(Math.random()*10);
+    		
+    		
+    		
+    	
 
-    }
+
+    
 
     /*
         사용자의 이름을 입력하고 컴퓨터와 가위바위보를 하세요. 

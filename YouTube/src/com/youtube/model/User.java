@@ -1,31 +1,82 @@
 package com.youtube.model;
 
 public class User {
-
-	
-	public String email;
-	public String phone;
-	public String id;
-	public String password;
-	public String nickName;
-	public char gender;
-	
 	//CRUD creat read update delete
+	//alt + shift + s
+	private String email;
+	private String phone;
+	private String id;
+	private String password;
+	private String nickName;
+	private char gender;
 	
-	public boolean login() {// 로그인
-		return false;
+	public User() {
 	}
-	public boolean signup() {// 회원가입
-		return false;
+
+	public User(String email, String phone, String id, String password, String nickName, char gender) {
+		this.email = email;
+		this.phone = phone;
+		this.id = id;
+		this.password = password;
+		this.nickName = nickName;
+		this.gender = gender;
 	}
-	public User viewProfile() {// 프로필 보기
-		return null;
+
+	public String getEmail() {
+		return email;
 	}
-	public User updateProfile()	{// 프로필 수정
-		return null;
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public boolean deleteProfile() {// 계정 삭제
-		return false;
+
+	public String getPhone() {
+		return phone;
 	}
-		
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	@Override
+	public String toString() {
+		return "User [email=" + email + ", phone=" + phone + ", id=" + id + ", password=" + password + ", nickName="
+				+ nickName + ", gender=" + gender + "]";
+	}
+	
+	
+	
+	
 }

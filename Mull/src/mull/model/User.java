@@ -1,6 +1,6 @@
 package mull.model;
 
-import java.util.Scanner;
+
 
 public class User {
 	
@@ -9,39 +9,52 @@ public class User {
 	public String phone;
 	public String nickname;
 	public String name;
+	public User() {
+	}
+	public User(String id, String password, String phone, String nickname, String name) {
+		this.id = id;
+		this.password = password;
+		this.phone = phone;
+		this.nickname = nickname;
+		this.name = name;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", password=" + password + ", phone=" + phone + ", nickname=" + nickname + ", name="
+				+ name + "]";
+	}
 	
 	
-	public boolean login() {
-		Scanner sc = new Scanner(System.in);
-		System.out.print("아이디 입력 : ");
-		String id1 = "lee";
-		id1 = sc.nextLine();
-		System.out.print("비밀번호 입력 : ");
-		int pw1 = 1111;
-		pw1 = sc.nextInt();
-		if ("lee".equals(id1) && pw1 == 1111) {
-			System.out.print("로그인 성공");
-
-		}else {
-			System.out.println("로그인 실패");
-			
-		}
-		return  login();
-	}
-	public boolean signup() {
-		return false;
-	}
-
-	public User find() {
-		return null;
-	}
-
-	public User naverlogin() {
-		return null;
-	}
-
-	public User kakaologin() {
-		return null;
-	}
+	
 
 }
