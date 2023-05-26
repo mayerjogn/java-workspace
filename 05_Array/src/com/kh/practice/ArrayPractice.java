@@ -1,8 +1,8 @@
 package com.kh.practice;
-
 import java.util.Scanner;
 import java.util.Arrays;
 public class ArrayPractice {
+	Scanner sc = new Scanner(System.in);
 	
 	/*
 	 * 길이가 5인 배열을 선언하고 과일 5개로 초기화 한 후 본인이 좋아하는 과일 하나를 출력하세요. (과일 5개는 뭐든지~)
@@ -10,18 +10,18 @@ public class ArrayPractice {
 	 * */
 	public void method1() {
 		String[] fruit = new String[5];
-				
+
 		fruit[0] = ("apple");
 		fruit[1] = ("banna");
 		fruit[2] = ("peach");
 		fruit[3] = ("mango");
 		fruit[4] = ("watermelon");
-		
-	//	System.out.println(fruit[0]);
-	//	System.out.println(fruit[1]);
+
+		// System.out.println(fruit[0]);
+		// System.out.println(fruit[1]);
 		System.out.println(fruit[2]);
-	//	System.out.println(fruit[3]);
-	//	System.out.println(fruit[4]);
+		// System.out.println(fruit[3]);
+		// System.out.println(fruit[4]);
 	}
 	
 	/*
@@ -38,16 +38,37 @@ public class ArrayPractice {
 	 * 2
 	 * */
 	public void method2() {
-		int [] arr = new int[5]; 
-		Scanner sc = new Scanner(System.in);
-	  for(int i = 0; i<arr.length; i++) {
-		//  arr[i] = 
-		  System.out.print("정수 : ");
-		  arr[i]=sc.nextInt();
-		  
-		  
-	  }
+		System.out.print("정수 : ");
+		int num = sc.nextInt();
+
+		int[] arr = new int[5];
+
+		int sum = 0;
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print("배열" + i + "번째 인덱스에 넣을 값 : ");
+//			 arr[i]=sc.nextInt();
+//			 System.out.print("배열 1번째 인덱스에 넣을 값 : ");
+//			 arr[i]=sc.nextInt();
+//			 System.out.print("배열 2번째 인덱스에 넣을 값 : ");
+//			 arr[i]=sc.nextInt();
+//			 System.out.print("배열 3번째 인덱스에 넣을 값 : ");
+//			 arr[i]=sc.nextInt();
+//			 System.out.print("배열 4번째 인덱스에 넣을 값 : ");
+			arr[i] = sc.nextInt();
+			sum += arr[i];
+
+		}
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + ",");
+		}
+		System.out.print("\n" + sum);
+//		 } 출력값에 []는 어떻게 넣는지 잘모르겠어요
+
 	}
+		  
+		  
+	  
+	
 	
 	
 	/*
@@ -56,25 +77,40 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method3() {
-		Scanner sc = new Scanner(System.in);
-		String[] food = new String [5];//{{"치킨"},{"피자"},{"탕수육"},{"떡볶이"},{"곱창"}};
-//		String str = Arrays.toString(arr);
-		food[0] = "치킨";
-		food[1] = "피자";
-		food[2] = "탕수육";
-		food[3] = "떡볶이";
-		food[4] = "곱창";
-		for(int i=0; i<food.length; i++ ) {	
-			System.out.print("정수 입력 > ");
-			String food1=sc.nextLine();
+
+//		String[] food = { "치킨", "피자", "떡볶이", "삼겹살", "닭발" };
+//		for(int i=0; i<food.length; i++) {
+//			System.out.print(food[i]);
+//			
+//		}
+//		System.out.print(food[1]);
+//		System.out.print("음식 입력 > ");
+//		int i1 = sc.nextInt();
+//		sc.nextLine();
+		String[] food = new String[5];
+		food[0]="치킨";
+		food[1]="피자";
+		food[2]="떡볶이";
+		food[3]="삼겹살";
+		food[4]="닭발";
+//		food=sc.nextInt();//여긴 입력값을 어떻게해야할지 모르겠습니다
+		System.out.print("배달 가능");
+			}//
+
+		
+		
+	
+		// = sc.nextLine();
+//		Scanner sc = new Scanner(System.in);
+//		String[] food = {"치킨","피자","삼겹살","떡볶이","국밥"};
+//		
+//			System.out.print("음식 번호 입력 > ");
+//			int fnum = sc.nextInt();
+		
 			
-		//	Arrays.toString 이거써보셈
-		
-		}
-		
-		
-		
-	}
+			
+
+	
 	
 	/*
 	 * 
@@ -86,7 +122,24 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method4() {
-		
+		System.out.print("주민등록번호 입력 : ");
+		String str = sc.nextLine();
+		char[] a = new char[str.length()];
+
+		for (int i = 0; i < a.length; i++) {
+			a[i] = str.charAt(i);
+		}
+		char[] copy = new char[a.length];
+		for (int i = 0; i < copy.length; i++) {
+
+			if (i <= 7) {
+				copy[i] = a[i];
+			} else {
+				copy[i] = '*';
+			}
+			System.out.print(copy[i]);
+		}
+
 	}
 	
 	/*
@@ -97,17 +150,27 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method5() {
-		
+		System.out.print("단어 입력 : ");
+		String word = sc.nextLine();		
+		char[] w = word.toCharArray();
+//		for(char p: ) {
+//			System.out.print("단어 입력 : ");
+//			String word = sc.nextLine();
+// d,a 참고			
+
+		for (int i = w.length - 1; i >= 0; i--) {
+			System.out.print(w[i]);
+		}
 	}
-	
+	// 이건 구글링해서 하긴했는데 어떻게한건지 모르겠어요 특히 for문 부분이 제일 헷갈려요
 
 public static void main(String[] args) {
 		ArrayPractice a = new ArrayPractice();
 //		a.method1();//o
-//		a.method2();//x
-		a.method3();//
-//		a.method4();
-//		a.method5();
-}
+//		a.method2();//△
+//		a.method3();//△
+//		a.method4();//
+		a.method5();//o
 
+}
 }
