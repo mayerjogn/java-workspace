@@ -77,27 +77,30 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method3() {
-
-//		String[] food = { "치킨", "피자", "떡볶이", "삼겹살", "닭발" };
-//		for(int i=0; i<food.length; i++) {
-//			System.out.print(food[i]);
-//			
-//		}
-//		System.out.print(food[1]);
-//		System.out.print("음식 입력 > ");
-//		int i1 = sc.nextInt();
-//		sc.nextLine();
-		String[] food = new String[5];
-		food[0]="치킨";
-		food[1]="피자";
-		food[2]="떡볶이";
-		food[3]="삼겹살";
-		food[4]="닭발";
-//		food=sc.nextInt();//여긴 입력값을 어떻게해야할지 모르겠습니다
-		System.out.print("배달 가능");
-			}//
-
+		String[] food = { "치킨", "피자", "떡볶이", "삼겹살", "닭발"};
+		System.out.println("음식 입력 > ");
+		String menu=sc.nextLine();
+		boolean a=false;
+		for(String b:food) {//b는 입력값 menu를 할당받고
+			if(b.equals(menu))//.equals()로 for문 안에있는 b를 입력값 menu랑 비교해서 확인 해서 참이면 if문 출력 거짓이면 else문 출력
+			a=true;
+			break;
+			
+		}
 		
+		
+		if (a) {
+			System.out.println("배달가능");
+
+		} else {
+			System.out.println("배달불가능");
+		}
+	}
+		//3번 문제는 입력값은 문자열로 입력 받아서 반복문을 이용해 배열에 있는 값들과 비교! break를 사용
+		
+			
+
+	
 		
 	
 		// = sc.nextLine();
@@ -151,26 +154,21 @@ public class ArrayPractice {
 	 * */
 	public void method5() {
 		System.out.print("단어 입력 : ");
-		String word = sc.nextLine();		
+		String word = sc.nextLine();
 		char[] w = word.toCharArray();
-//		for(char p: ) {
-//			System.out.print("단어 입력 : ");
-//			String word = sc.nextLine();
-// d,a 참고			
 
 		for (int i = w.length - 1; i >= 0; i--) {
 			System.out.print(w[i]);
 		}
 	}
-	// 이건 구글링해서 하긴했는데 어떻게한건지 모르겠어요 특히 for문 부분이 제일 헷갈려요
 
 public static void main(String[] args) {
 		ArrayPractice a = new ArrayPractice();
 //		a.method1();//o
 //		a.method2();//△
-//		a.method3();//△
+		a.method3();//△
 //		a.method4();//
-		a.method5();//o
+//		a.method5();//o
 
 }
 }

@@ -29,31 +29,35 @@ public class D_While {
 	 * 반복문에서만 빠져나간다.
 	 */
 
-	// for문 무한루프
-//	public void method2() {
-//		
-//		for(int i=1; ;i<=5;) {// <=무한루프
-//			System.out.println(i);
-//			i++; //<=해결방법
-//		}
-//		for(int i=1; ;) {//<= 무한루프
-//			if(i<=5) { //<= 해결방법
-//			System.out.println(i); 
-//			}else{	
-//				break;
-//			i++;
-	// }
-//		}
+//	for문 무한루프
+	public void method2() {
+		
+		for (int i = 1; i <= 5;) {// <=무한루프
+			System.out.println(i);
+			i++; // <=해결방법
+		}
+		for (int i = 1;;) {// <= 무한루프
+			if (i <= 5) { // <= 해결방법
+				System.out.println(i);
+			} else {
+				break;
+	//			i++;
+			}
+		}
 //			for(;;) {
-//				if(i<=5) { //<= 해결방법
-//					System.out.println(i); 
+//				
+//				if(i <=5) { //<= 해결방법
+//					
+//					System.out.println(i);
+//					i++;
 //					}else{	
 //						break;
-//						i++
-//			}
-//		
+						
+			}
+		
 //	}
 //}
+
 	// while문 무한루프
 	public void method3() {
 		int input = 0;
