@@ -170,7 +170,7 @@ public static void main(String[] args) {
 //		a.method2();//△
 //		a.method3();//△
 //		a.method4();//
-//		a.method5();//o
+		a.method5();//o
 
 }
 }

@@ -15,8 +15,7 @@ public class Video {
 	private int views; //count;
 	private String imgurl;
 	private String fileurl;
-	public Video() {
-	}
+	public Video() {}
 	public Video(String title, String comment, Date uploadAt, int views, String imgurl, String fileurl) {
 		this.title = title;
 		this.comment = comment;

@@ -17,7 +17,9 @@ public class EmployeeController {
 	}
 	public void add(int empNo, String name, char gender, String phone, 
 			String dept, int salary, double bonus) {
+		
 		this.add(empNo, name, gender, phone);
+		
 		employee.setDept(dept);
 		employee.setSalary(salary);
 		employee.setBonus(bonus);

@@ -10,8 +10,9 @@ public class User {
 	private String nickName;
 	private char gender;
 	
-	public User() {
-	}
+	Video video;//포함관계 명시
+	
+	public User() {}
 
 	public User(String email, String phone, String id, String password, String nickName, char gender) {
 		this.email = email;
@@ -19,7 +20,7 @@ public class User {
 		this.id = id;
 		this.password = password;
 		this.nickName = nickName;
-		this.gender = gender;
+		this.gender = gender;				
 	}
 
 	public String getEmail() {

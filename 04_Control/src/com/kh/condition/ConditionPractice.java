@@ -85,9 +85,9 @@ public class ConditionPractice {
 		System.out.print("피자 먹는 사람 수 : ");
 		int b = sc.nextInt();
 
-		int c = a / b;
-		if (a % b != 0) {
-			c++;
+		int c = a & b;
+		if (c != 1) {
+			
 		}
 
 		System.out.println(c);
@@ -445,23 +445,26 @@ public class ConditionPractice {
 			System.out.println("총점 : " + (a + b + c + d));
 			System.out.println("PASS");
 
-		} else if (x < 70 && s4 >= d) {
+		  if (x < 70 && s4 >= d) {
 			System.out.println("FAIL[점수 미달]" + " (총점" + (a + b + c + d) + ")");
-		} else if (s4 < 20) {
+		  if (s4 < 20) {
 			System.out.println("FAIL[출석 횟수부족] (" + s4 + "/20)");
+			
 
-		} else {
+		} else if(x < 70&& s4<20) {
 			System.out.println("FAIL[출석 횟수부족] (" + s4 + "/20)");// 그러면서 여기도 안되네요
 			System.out.println("FAIL[점수 미달]" + " (총점" + (a + b + c + s4) + ")");
 
 		}
 	}
+		}
+		}
 
 public static void main(String[] args) {
 	ConditionPractice c= new ConditionPractice();
 	//c.practice1(); //o
 	//c.practice2(); //o
-	//c.practice3(); //x
+//	c.practice3(); //x
 	//c.practice4(); //o
 	//c.practice5(); //o
 	//c.practice6(); //o
@@ -469,7 +472,7 @@ public static void main(String[] args) {
 	//c.practice8(); //o
 	//c.practice9(); //x
 	//c.practice10();//o
-	//c.practice11(); //x
+	c.practice11(); //x
 	
 	}
     
