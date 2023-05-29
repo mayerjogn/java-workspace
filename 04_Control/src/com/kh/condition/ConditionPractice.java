@@ -433,32 +433,26 @@ public class ConditionPractice {
 		double c = s3 * 0.3;
 
 		double d = s4;
-
-		double x = a + b + c + d;
-
+		
 		System.out.println("=======결과======");
-		if (x >= 70 && s4 >= d) {
-			System.out.println("중간 고사 점수(20) : " + a);
-			System.out.println("기말 고사 점수(30) : " + b);
-			System.out.println("과제 점수(30) : " + c);
-			System.out.println("출석 점수(20) : " + d);
-			System.out.println("총점 : " + (a + b + c + d));
-			System.out.println("PASS");
-
-		  if (x < 70 && s4 >= d) {
-			System.out.println("FAIL[점수 미달]" + " (총점" + (a + b + c + d) + ")");
-		  if (s4 < 20) {
+		if (s4 < 14) {
 			System.out.println("FAIL[출석 횟수부족] (" + s4 + "/20)");
-			
+			if (a + b + c + d >= 70 && s4 >= 14) {
+				System.out.println("중간 고사 점수(20) : " + a);
+				System.out.println("기말 고사 점수(30) : " + b);
+				System.out.println("과제 점수(30) : " + c);
+				System.out.println("출석 점수(20) : " + d);
+				System.out.println("총점 : " + (a + b + c + d));
+				System.out.println("PASS");
+			}
 
-		} else if(x < 70&& s4<20) {
-			System.out.println("FAIL[출석 횟수부족] (" + s4 + "/20)");// 그러면서 여기도 안되네요
-			System.out.println("FAIL[점수 미달]" + " (총점" + (a + b + c + s4) + ")");
+			else if (a + b + c + d < 70) {
+				System.out.println("FAIL[점수 미달]" + " (총점" + (a + b + c + d) + ")");
 
+			}
 		}
+
 	}
-		}
-		}
 
 public static void main(String[] args) {
 	ConditionPractice c= new ConditionPractice();
