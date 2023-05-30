@@ -27,7 +27,8 @@ public class Application {
 			System.out.println("현재 등록 회원수는" + mc.count + "명입니다.");			
 			if(mc.count<3) {
 				System.out.println("1. 새 회원 등록");
-			}else {System.out.println("회원 수가 모두 꽉 찼기 때문에 일부 메뉴만 오픈됩니다.");
+			}else {
+				System.out.println("회원 수가 모두 꽉 찼기 때문에 일부 메뉴만 오픈됩니다.");
 			}
 			System.out.println("2. 회원 정보 수정");
 			System.out.println("3. 전체 회원 정보 출력");
