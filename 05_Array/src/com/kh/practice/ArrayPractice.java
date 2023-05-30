@@ -39,37 +39,20 @@ public class ArrayPractice {
 	 * */
 	public void method2() {
 		System.out.print("정수 : ");
-		int num = sc.nextInt();
-
-		int[] arr = new int[5];
-
+		int [] arr  = new int[sc.nextInt()];
 		int sum = 0;
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print("배열" + i + "번째 인덱스에 넣을 값 : ");
-//			 arr[i]=sc.nextInt();
-//			 System.out.print("배열 1번째 인덱스에 넣을 값 : ");
-//			 arr[i]=sc.nextInt();
-//			 System.out.print("배열 2번째 인덱스에 넣을 값 : ");
-//			 arr[i]=sc.nextInt();
-//			 System.out.print("배열 3번째 인덱스에 넣을 값 : ");
-//			 arr[i]=sc.nextInt();
-//			 System.out.print("배열 4번째 인덱스에 넣을 값 : ");
 			arr[i] = sc.nextInt();
 			sum += arr[i];
-
+	
 		}
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + ",");
+		System.out.println( Arrays.toString(arr));
+		System.out.println(sum);
 		}
-		System.out.print("\n" + sum);
-//		 } 출력값에 []는 어떻게 넣는지 잘모르겠어요
-
-	}
-		  
-		  
-	  
 	
 	
+
 	
 	/*
 	 * 음식 메뉴는 자유롭게! 개수도 자유롭게! 배열 사용해서
@@ -77,25 +60,24 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method3() {
-		String[] food = { "치킨", "피자", "떡볶이", "삼겹살", "닭발"};
+		String[] food = { "치킨", "피자", "떡볶이", "삼겹살", "닭발" };
 		System.out.println("음식 입력 > ");
-		String menu=sc.nextLine();
-		boolean a=false;
-		for(String b:food) {//b는 입력값 menu를 할당받고
-			if(b.equals(menu))//.equals()로 for문 안에있는 b를 입력값 menu랑 비교해서 확인 해서 참이면 if문 출력 거짓이면 else문 출력
-			a=true;
-			break;
+		String menu = sc.nextLine();
+		boolean a = false;
+		for (String b : food) {// b는 입력값 menu를 할당받고
+			if (b.equals(menu))// .equals()로 for문 안에있는 b를 입력값 menu랑 비교해서 확인 해서 참이면 if문 출력 거짓이면 else문 출력
+				a = true;
 			
-		}
-		
-		
-		if (a) {
-			System.out.println("배달가능");
+			if (a) {
+				System.out.println("배달가능");
+				break;
 
-		} else {
-			System.out.println("배달불가능");
+			} else {
+				System.out.println("배달불가능");
+			}
 		}
 	}
+	
 		//3번 문제는 입력값은 문자열로 입력 받아서 반복문을 이용해 배열에 있는 값들과 비교! break를 사용
 		
 			
@@ -165,8 +147,8 @@ public class ArrayPractice {
 public static void main(String[] args) {
 		ArrayPractice a = new ArrayPractice();
 //		a.method1();//o
-//		a.method2();//△
-		a.method3();//△
+		a.method2();//△
+//		a.method3();//△
 //		a.method4();//
 //		a.method5();//o
 

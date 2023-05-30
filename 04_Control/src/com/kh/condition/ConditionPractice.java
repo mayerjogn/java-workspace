@@ -74,12 +74,15 @@ public class ConditionPractice {
 		System.out.print("피자 먹는 사람 수 : ");
 		int b = sc.nextInt();
 
-		int c = a & b;
-		if (c != 1) {
+		int c = b / a;
+		if (b%a==0) {
+			System.out.println(c);
 
+		}else {
+			System.out.println(c+1);
 		}
 
-		System.out.println(c);
+		
 	}
 
 	/*
@@ -102,7 +105,7 @@ public class ConditionPractice {
 		b = sc.nextInt();
 		System.out.print("영어 점수 : ");
 		c = sc.nextInt();
-		if ((a + b + c) / 3 >= 60 && (a + b + c) >= 40) {
+		if ((a + b + c) / 3 >= 60 && a >= 40 && b>=40 && c>=50) {
 			int d = a + b + c;
 			float e = d / 3;
 			System.out.println("합계 : " + d);
@@ -127,8 +130,18 @@ public class ConditionPractice {
 		a = sc.nextInt();
 		if (a >= (500000)) {
 			int price = (int) (a * 0.8);
-			System.out.printf("지불해야 할 금액 : %,d", price); // 어떻게 464,000로 출력되긴했는데 아직도 printf가 좀 헷갈려요 %,d로 천 단위에 딱,이 찍힌건지
-															// 모르겠어요
+			System.out.printf("지불해야 할 금액 : %,d", price); // 10만원 30만원 이상도 else if로 else로 마무리
+		}else if(a>=(300000)) {
+			int price = (int)(a*0.9);
+			System.out.printf("지불해야 할 금액 : %,d", price);
+			
+		}else if(a>=(100000)){
+			int price=(int)(a*0.95);
+			System.out.printf("지불해야 할 금액 : %,d", price);
+			
+		}else {
+			int price=(a);
+			System.out.println(price);
 		}
 	}
 
@@ -226,9 +239,9 @@ public class ConditionPractice {
 
 		if (num3 < 18.5) {
 			System.out.print("BMI 지수 : " + num3 + "\n저체중");
-		} else if (num3 >= 18.5 && num3 < 23) {
+		} else if (num3 < 23) {
 			System.out.print("BMI 지수 : " + num3 + "\n정상체중");
-		} else if (num3 >= 23 && num3 < 25) {
+		} else if ( num3 < 25) {
 			System.out.print("BMI 지수 : " + num3 + "\n과체중");
 		} else if (num3 >= 25 && num3 < 30) {
 			System.out.print("BMI 지수 : " + num3 + "\n비만");
@@ -277,6 +290,7 @@ public class ConditionPractice {
 		case '%':
 			int e = x % y;
 			System.out.print(x + " % " + y + " = " + e);
+			break;
 		default:
 			System.out.print("잘못입력하셨습니다, 프로그램을 종료합니다.");
 
@@ -392,10 +406,10 @@ public class ConditionPractice {
 		// c.practice2(); //o
 		// c.practice3(); //흠...
 		// c.practice4(); //o
-		// c.practice5(); //o
+		//c.practice5(); //o
 		// c.practice6(); //o
 		// c.practice7(); //o
-		// c.practice8(); //o
+		 //c.practice8(); //o
 		// c.practice9(); //o
 		// c.practice10();//o
 		// c.practice11(); // o
