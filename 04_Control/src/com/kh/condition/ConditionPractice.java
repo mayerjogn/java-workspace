@@ -105,7 +105,7 @@ public class ConditionPractice {
 		b = sc.nextInt();
 		System.out.print("영어 점수 : ");
 		c = sc.nextInt();
-		if ((a + b + c) / 3 >= 60 && a >= 40 && b>=40 && c>=50) {
+		if ((a + b + c) / 3 >= 60 && a >= 40 && b>=40 && c>=40) {
 			int d = a + b + c;
 			float e = d / 3;
 			System.out.println("합계 : " + d);
@@ -246,7 +246,7 @@ public class ConditionPractice {
 		} else if (num3 >= 25 && num3 < 30) {
 			System.out.print("BMI 지수 : " + num3 + "\n비만");
 
-		} else if (num3 > 30) {
+		} else  {
 			System.out.print("BMI 지수 : " + num3 + "\n고도비만");
 		}
 
@@ -283,6 +283,7 @@ public class ConditionPractice {
 		case '*':
 			int c = x * y;
 			System.out.print(x + " * " + y + " = " + c);
+			break;
 		case '/':
 			int d = x / y;
 			System.out.print(x + " / " + y + " = " + d);

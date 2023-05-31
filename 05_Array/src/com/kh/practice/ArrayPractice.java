@@ -67,16 +67,16 @@ public class ArrayPractice {
 		for (String b : food) {// b는 입력값 menu를 할당받고
 			if (b.equals(menu))// .equals()로 for문 안에있는 b를 입력값 menu랑 비교해서 확인 해서 참이면 if문 출력 거짓이면 else문 출력
 				a = true;
-			
+		}
 			if (a) {
 				System.out.println("배달가능");
-				break;
+				
 
 			} else {
 				System.out.println("배달불가능");
 			}
 		}
-	}
+	
 	
 		//3번 문제는 입력값은 문자열로 입력 받아서 반복문을 이용해 배열에 있는 값들과 비교! break를 사용
 		
@@ -147,8 +147,8 @@ public class ArrayPractice {
 public static void main(String[] args) {
 		ArrayPractice a = new ArrayPractice();
 //		a.method1();//o
-		a.method2();//△
-//		a.method3();//△
+//		a.method2();//△
+		a.method3();//△
 //		a.method4();//
 //		a.method5();//o
 
