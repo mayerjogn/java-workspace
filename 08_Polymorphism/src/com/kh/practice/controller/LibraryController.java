@@ -19,7 +19,7 @@ public class LibraryController {
 	}
 	// 멤버 생성자 이용해서 멤버 정보 추가
 	public void insertMember(String name, int age) {
-		member = new Member(name,age); 
+		member = new Member(name,age);  //멤버 생성자 이용한거임
 			
 		}
 		
@@ -34,12 +34,12 @@ public class LibraryController {
 	// 매개변수로 받은 키워드가 포함된 제목을 가진 책 1권 반환
 	public Book searchBook(String keyword) {
 		for(Book book : bookList) {
-		if(book.getTitle().contains(keyword)) {
+		if(book.getTitle().contains(keyword)) {//문자열.contains() <--- 이거 이용!
 		
 			return book;
 		//	Book book=(Book)keyword; <-어림없지
 		}
-		//문자열.contains() <--- 이거 이용!
+		
 	}
 		return null;
 	}
