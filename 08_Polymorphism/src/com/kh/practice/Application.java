@@ -57,7 +57,7 @@ public class Application {
 		
 		System.out.print("검색할 제목 키워드 : ");
 		String keyword = sc.nextLine();
-		System.out.print(lc.searchBook(keyword));
+		System.out.println(lc.searchBook(keyword));
 		
 	}
 	
