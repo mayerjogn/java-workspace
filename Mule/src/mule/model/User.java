@@ -4,12 +4,12 @@ package mule.model;
 
 public class User {
 	
-	public String id;
-	public String password;
-	public String phone;
-	public String nickname;
-	public String name;
-	public User() {
+	private String id;
+	private String password;
+	private String phone;
+	private String nickname;
+	private String name;
+	private User() {
 	}
 	public User(String id, String password, String phone, String nickname, String name) {
 		this.id = id;

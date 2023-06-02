@@ -2,11 +2,11 @@ package mule.model;
 
 public class Home {
 
-	public String post;
-	public String search;
-	public String market;
-	public String review;
-	public String job;
+	private String post;
+	private String search;
+	private String market;
+	private String review;
+	private String job;
 	
 	public Home() {
 	}
