@@ -18,7 +18,7 @@ public class Application {
 
 	public void mainMenu() {
 
-		try {
+		try {// try~ catch문은 예외처리할 부분이 애매하면 전부 때려박음
 			boolean check = true;
 			while (check) {
 				System.out.println("==== 메인 메뉴 ====");

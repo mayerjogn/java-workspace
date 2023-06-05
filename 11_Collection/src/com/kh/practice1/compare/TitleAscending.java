@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 import com.kh.practice1.model.Music;
 
-public class TitleAscending implements Comparator<Music> {
+public class TitleAscending implements Comparator<Music> { //Comparator랑 Comparable 차이 생각하기
 	
 	/*
 	 * 두 개의 매개값으로 전달된 객체를 비교
