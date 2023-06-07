@@ -25,30 +25,21 @@ public class FarmController {
 
 		// 존재할 경우 false 반환
 
-		Set<Farm> keys = hMap.keySet();
-		Collection<Integer> col = hMap.values();
-		try {
-			for (Farm key : keys) {
-
-				if (hMap.containsValue(key)) {
-					return false;
-				} else {
-					hMap.put(f, amount);
-				}
-			}
-
-		} catch (Exception e) {
+		if (!hMap.containsKey(f)) {
 			return true;
+		} else {
+			return false;
+//			hMap.put(f, amount);
+
 		}
+
+	}
+
 //		for (Farm key : keys) {
 //			if (hMap.containsValue(key)) {
 //				return false;
 //			} else {
 //				hMap.put(f, amount);
-
-		return false;
-
-	}
 
 	public boolean removeKind(Farm f) {
 
@@ -56,17 +47,14 @@ public class FarmController {
 		// hMap에 f 삭제 후 true 반환
 
 		// 존재하지 않을 경우 false 반환
-		Set<Farm> keys = hMap.keySet();
-		for (Farm key : keys) {
-			if (hMap.get(key).equals(key)) {
-				return false;
-			} else {
-				hMap.remove(f);
-				return true;
-			}
+		if (hMap.equals(f)) {
+			hMap.remove(f);
+			return true;
 
+		} else {
+			return false;
 		}
-		return false;
+
 	}
 
 	public boolean changeAmount(Farm f, int amount) {
@@ -75,19 +63,14 @@ public class FarmController {
 		// f와 amount 저장 후 true 반환
 
 		// 존재하지 않을 경우 false 반환
-		Set<Farm> keys = hMap.keySet();
-		
-		for (Farm key : keys) {
-		hMap.replace(key, amount);
-			if (hMap.get(key).equals(key)) {
-				return true;
-			} else {
-				 ((List<Farm>) hMap).set(amount, f);
-				return false;
-			}
 
+		if (hMap.equals(f)) {
+			return true;
+		} else {
+
+			return false;
 		}
-		return false;
+
 	}
 
 	public HashMap<Farm, Integer> printFarm() {
@@ -102,20 +85,22 @@ public class FarmController {
 		// list에 f 추가, 그리고 hMap에 f 수량 1 감소, true 반환
 
 		// 존재하지 않으면 false 반환
-		ArrayList<Farm> keys = list.keySet();
-		for (int i =0; list.size()<=1;  i++) {
-			if(list.containsKey(i));{
-				return list == null;			
-		}else {
-			
+
+//		for (int i =0; list.size()<=1;  i++) {
+		if (list.equals(f)) {
+			list.remove(f);
+			if (hMap.equals(f)) {
+				int count = hMap.get(f);
+				hMap.put(f, count--);
+			} else {
+				hMap.put(f, 1);
+			}
+			return true;
+		} else {
+
 			return false;
-		}
-		}
-		
-	
 
-
-		return false;
+		}
 	}
 
 	public boolean removeFarm(Farm f) {
@@ -124,20 +109,21 @@ public class FarmController {
 		// list에 f 삭제, 그리고 hMap에 f 수량 1 증가, true 반환
 
 		// 아니면 false 반환
-		Set<Farm> keys = list.keySet();
-		for (Farm key : keys) {
-			if (list.get(key).equals(key)) {
-				return false;
+		if (list.equals(f)) {
+			list.remove(f);
+			if (hMap.equals(f)) {
+				int count = hMap.get(f);
+				hMap.put(f, count++);
 			} else {
-				list.remove(f);
-				return true;
+				hMap.put(f, 1);
 			}
+			return true;
+		} else {
 
+			return false;
 		}
-		return false;
-	}
 
-	
+	}
 
 	public ArrayList<Farm> printBuyFarm() {
 		return list;
