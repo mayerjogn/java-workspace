@@ -26,20 +26,13 @@ public class FarmController {
 		// 존재할 경우 false 반환
 
 		if (!hMap.containsKey(f)) {
+			hMap.put(f, amount);
 			return true;
-		} else {
-			return false;
-//			hMap.put(f, amount);
-
 		}
 
-	}
+		return false;// 존재하지 않는 경우
 
-//		for (Farm key : keys) {
-//			if (hMap.containsValue(key)) {
-//				return false;
-//			} else {
-//				hMap.put(f, amount);
+	}
 
 	public boolean removeKind(Farm f) {
 
@@ -47,14 +40,11 @@ public class FarmController {
 		// hMap에 f 삭제 후 true 반환
 
 		// 존재하지 않을 경우 false 반환
-		if (hMap.equals(f)) {
+		if (hMap.containsKey(f)) {
 			hMap.remove(f);
 			return true;
-
-		} else {
-			return false;
 		}
-
+		return false;// 존재하지 않는 경우
 	}
 
 	public boolean changeAmount(Farm f, int amount) {
@@ -64,13 +54,12 @@ public class FarmController {
 
 		// 존재하지 않을 경우 false 반환
 
-		if (hMap.equals(f)) {
+		if (hMap.containsKey(f)) {
+			hMap.put(f, amount);
 			return true;
-		} else {
-
-			return false;
 		}
 
+		return false;// 존재하지 않는 경우
 	}
 
 	public HashMap<Farm, Integer> printFarm() {
@@ -83,46 +72,28 @@ public class FarmController {
 
 		// 전달 받은 f가 hMap 안에 존재하면서 그 f의 수량이 1개 이상 일 때
 		// list에 f 추가, 그리고 hMap에 f 수량 1 감소, true 반환
-
 		// 존재하지 않으면 false 반환
 
-//		for (int i =0; list.size()<=1;  i++) {
-		if (list.equals(f)) {
-			list.remove(f);
-			if (hMap.equals(f)) {
-				int count = hMap.get(f);
-				hMap.put(f, count--);
-			} else {
-				hMap.put(f, 1);
-			}
+		if (hMap.containsKey(f) && hMap.get(f) > 0) {// 전달 받은 f가 hMap 안에 존재하면서 그 f의 수량이 1개 이상 일 때
+			list.add(f);
+			hMap.put(f, hMap.get(f) - 1); // list에 f 추가, 그리고 hMap에 f 수량 1 감소, true 반환
 			return true;
-		} else {
-
-			return false;
-
 		}
+		return false; // 존재하지 않으면 false 반환
 	}
 
 	public boolean removeFarm(Farm f) {
 
 		// 전달 받은 f가 list에 존재할 때
 		// list에 f 삭제, 그리고 hMap에 f 수량 1 증가, true 반환
-
 		// 아니면 false 반환
-		if (list.equals(f)) {
-			list.remove(f);
-			if (hMap.equals(f)) {
-				int count = hMap.get(f);
-				hMap.put(f, count++);
-			} else {
-				hMap.put(f, 1);
-			}
+		
+		if (list.contains(f)) { // 전달 받은 f가 list에 존재할 때
+			list.remove(f); // list에 f 삭제
+			hMap.put(f, hMap.get(f)+1); // hMap에 f 수량 1 증가, true 반환
 			return true;
-		} else {
-
-			return false;
 		}
-
+		return false; // 아니면 false 반환
 	}
 
 	public ArrayList<Farm> printBuyFarm() {

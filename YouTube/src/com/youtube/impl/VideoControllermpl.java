@@ -1,4 +1,4 @@
-package com.youtube.controller;
+package com.youtube.impl;
 
 import com.youtube.model.Video;
 
