@@ -32,7 +32,7 @@ public class Application {
 			System.out.println("메뉴 번호 입력 : ");
 			switch(Integer.parseInt(sc.nextLine())) {
 			case 1:
-				login();
+				//login();
 				break;
 			case 2:
 				break;

@@ -10,10 +10,10 @@ public class  UserController {
 		if(user!=null&&user.getId().equals(id)&&user.getPassword().equals(password)) {
 			
 
-		return user.getId().;
+		return false;
 		
 	}
-	return null;
+	return true;
 }
 
 	public void signup(User user) {//회원가입
