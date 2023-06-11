@@ -12,9 +12,9 @@ public class LoopPractice {
 		// l.method1(); //o
 		// l.method2(); //흠..
 		// l.method3(); //o
-		// l.method4(); //흠..
-		// l.method5();//
-		  l.method6();//△
+		// l.method4(); //o
+		 l.method5();//마지막
+		 // l.method6();//o
 	}
 
 	Scanner sc = new Scanner(System.in);
@@ -54,7 +54,14 @@ public class LoopPractice {
 				break;
 			}
 		}
-	}//요건 도경씨 도움받아서했는데 솔직히 잘 이해못했습니다
+		int i = 0;
+		while(sum <= 100) {//i가 100보다 작거나 같을때까지 반복하고
+			if(i % 2 == 0) sum -= i;// 요기서 i가 짝수면 sum에서 i를 빼고
+			else sum += i;// 아니면 sum에 i를 더한다는게 맞나요?
+		}
+		System.out.println(i);
+		//System.out.println("sum : " + sum); 아하
+	}
     		
     	
 
@@ -78,7 +85,7 @@ public class LoopPractice {
 
 		for (int i = 0; i < str.length(); i++) {
 			if (str.charAt(i) == ch) {
-				a++; // 풀긴했는데 이부분이 왜들어가는지 잘모르겠습니다
+				a++; // 카운트를 세거나 더한다는 정도로 이해해도 될까요??
 			}
 
 		}
@@ -91,16 +98,16 @@ public class LoopPractice {
 	 */
 	public void method4() {
 
-		for (;;) {// 이 부분이 한개나 두개만 안넣으면 왜 안되는지 왜 다비워놔야되는지 모르겠어요
-			int num = (int) (Math.random() * 10);
+		for (int i=0;;i++) {
+			double random = Math.random()*11;
+			int num = (int)random;
 			System.out.println(num);
 			if (num == 0) {
 				break;
 			}
 
-		} // 0만 나올때도있는게 맞는건지 모르겠어요
-	}// 반복문 넘어지럽습니다..
-
+		} 
+	}
 	/*
 	 * 주사위를 10번 굴렸을 때 각 눈의 수가 몇 번 나왔는지 출력하세요. (random 사용!)
 	 * 
@@ -113,17 +120,45 @@ public class LoopPractice {
 	 * 
 	 */
 	public void method5() {
-		// System.out.print("주사위 굴리기 : ");
-		// int num=sc.nextInt();
-		int r = (int) (Math.random() * 10 + 1);
-		for (int i = 1; i <= 6; i++) {
-			int num = (int) (Math.random() * 6 + 1);
-			int num2 = (int) (Math.random() * 6 + 1);
-			// 흠... if(r ==) {
-			System.out.println(num + " : " + num2);
-
-			// break;
+		int fir = 0;
+		int sec = 0;
+		int thi = 0;
+		int fou = 0;
+		int fif = 0;
+		int six = 0;
+		
+		for (int i = 1; i <= 10; i++) {
+			int num = (int) (Math.random() * 6)+1;
+			
+		switch(num) {
+		case 1:
+			++ fir;
+			break;
+		case 2:
+			++ sec;
+			break;
+		case 3:
+			++ thi;
+			break;
+		case 4:
+			++ fou;
+			break;
+		case 5:
+			++ fif;
+			break;
+		case 6:
+			++ six;
+			break;
+			
 		}
+		}
+		System.out.println("1 : "+fir);
+		System.out.println("2 : "+sec);
+		System.out.println("3 : "+thi);
+		System.out.println("4 : "+fou);
+		System.out.println("5 : "+fif);
+		System.out.println("6 : "+six);
+		
 	}
 
 	// int r = (int)(Math.random()*10);
@@ -148,63 +183,67 @@ public class LoopPractice {
 	 */
 	public void method6() {
 //		int a =(int)(Math.random());
-		
+		//마지막에 각 얼마나 이기고 지고 비겼는지 출력되게 나오게하기 지금은 가위바위보 할때마다 나옴
 		int w = 0;
 		int l = 0;
 		int c = 0;
 
 		System.out.print("당신의 이름을 입력해주세요 : ");
 		String name = sc.nextLine();
-		for(int i=0; ;i++) {
+		
+		for (int i = 0;; i++) {
+
+			System.out.print("가위바위보 : ");
+			String p = sc.nextLine();
+
+			int a = 0;
+
+			switch (p) {
 			
-		System.out.print("가위바위보 : ");
-		String p = sc.nextLine();
-		
-		int a= 0;
-		
-		switch(p) {
-		case "가위":
-			 a=0;
-			break;
-		case "바위":
-			a=1;
-			break;
-		case "보" :
-			a=2;
-			break;
-		}
-		int random = (int) (Math.random() *3);
-		int ran = (int)random;
-		String str = "";
-		switch(ran) {
-		case 0:
-		str = "가위";
-		break;
-		
-		case 1:
-		str = "바위";	
-		break;
-		
-		case 2:
-		str = "보";	
-		break;	
-		}
-		System.out.printf("컴퓨터 : %s\n",name,a);
-			
-		if(a==ran) {
-			System.out.printf("%s : %s\n",name,a);
-			System.out.println("비겼습니다");
-			++c;
-		}else if(ran==(a+1)||(ran==0 && a==2)){
-			System.out.printf("%s : %s\n",name,a);
-			System.out.println("졌습니다. ㅠㅠ");
-			++l;
-		}else if((ran==2&&a==0)||(ran==a-1)){
-			System.out.printf("%s : %s\n",name,a);
-			System.out.println("이겼습니다!");
-			++w;
-			System.out.printf("당신은 %d번 이기고, %d번 지고, %d번 비겼습니다. ",w, l ,c);
-			break;
+			case "가위":
+				a = 0;				
+				break;
+				
+			case "바위":
+				a = 1;
+				break;
+				
+			case "보":
+				a = 2;
+				break;
+			}
+			double random = Math.random() * 3;
+			int ran = (int) random;
+			String str = "";
+			switch (ran) {
+			case 0:
+				str = "가위";
+				break;
+
+			case 1:
+				str = "바위";
+				break;
+
+			case 2:
+				str = "보";
+				break;
+			}
+			System.out.printf("컴퓨터 : %s\n", str);
+
+			if (ran == a) {
+				System.out.printf("%s : %s\n", name, p);
+				System.out.println("비겼습니다");
+				++c;
+			} else if (ran == (a + 1) || (ran == 0 && a == 2)) {
+				System.out.printf("%s : %s\n", name, p);
+				System.out.println("졌습니다. ㅠㅠ");
+				++l;
+			} else if ((ran == 2 && a == 0) || (ran == a - 1)) {
+				System.out.printf("%s : %s\n", name, p);
+				System.out.println("이겼습니다!");
+				++w;
+				System.out.printf("당신은 %d번 이기고, %d번 지고, %d번 비겼습니다. ", w, l, c);
+				break;
 		}
 			
 		
