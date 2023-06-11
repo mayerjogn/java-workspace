@@ -1,6 +1,7 @@
 package mule.model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class User {
 	
@@ -58,6 +59,25 @@ public class User {
 
 	public void setPostlist(List<Post> postlist) {
 		this.postlist = postlist;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, name, nickname, password, phone, postlist);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		return Objects.equals(id, other.id) && Objects.equals(name, other.name)
+				&& Objects.equals(nickname, other.nickname) && Objects.equals(password, other.password)
+				&& Objects.equals(phone, other.phone) && Objects.equals(postlist, other.postlist);
 	}
 	
 	

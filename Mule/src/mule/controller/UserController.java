@@ -1,37 +1,49 @@
 package mule.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import mule.model.User;
 
 public class  UserController {
 
-	User user = null;
+	private HashMap<String, User> map = new HashMap<>();
+	private ArrayList<User> list = new ArrayList<>();
+	
 
-	public boolean login(String id, String password) {//로그인
-		if(user!=null&&user.getId().equals(id)&&user.getPassword().equals(password)) {
+	public boolean signup(String id, User u) {//회원가입
+		if(!map.containsKey(id)) {
+			map.put(id, u);
+			return true;
+		}
+		return false;
+	}
+	
+	public String login(String id, String pw) {//로그인
+		if(map.containsKey(id)&&map.get(id).getPassword().equals(pw)) {
 			
 
-		return false;
+		return map.get(id).getName();
 		
 	}
-	return true;
+	return null;
 }
 
-	public void signup(User user) {//회원가입
-		this.user=user;
-	}
+	public void chaneName(String id , String newName) {
+		
+		map.put(id,new User(map.get(id).getPassword(),newName));
+		
 
-	public User find() {
-		if(login(user.getId(),user.getPassword())) {// id pw 찾기
-			return user;
-		}
-		return null;
 		
 	}
-	public void deleteProfile(String id) {//계정 삭제
-		if(user.getId().equals(id)) {
-			user = null;
+	public boolean deleteProfile(User u) {//계정 삭제
+		if(list.contains(u)) {
+			list.remove(u);
+			
+			return true;// 계정 존재할경우 
 		}
-	}////
+		return false;// 계정 없을 경우
+	}
 
 	
 	
