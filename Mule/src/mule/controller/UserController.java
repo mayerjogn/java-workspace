@@ -1,14 +1,13 @@
 package mule.controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import mule.model.User;
 
+
 public class  UserController {
 
 	private HashMap<String, User> map = new HashMap<>();
-	private ArrayList<User> list = new ArrayList<>();
 	
 
 	public boolean signup(String id, User u) {//회원가입
@@ -19,8 +18,8 @@ public class  UserController {
 		return false;
 	}
 	
-	public String login(String id, String pw) {//로그인
-		if(map.containsKey(id)&&map.get(id).getPassword().equals(pw)) {
+	public String login(String id, String password) {//로그인
+		if(map.containsKey(id)&&map.get(id).getPassword().equals(password)) {
 			
 
 		return map.get(id).getName();
@@ -29,17 +28,21 @@ public class  UserController {
 	return null;
 }
 
-	public void chaneName(String id , String newName) {
+	public boolean changeName(String id , String newName) {
 		
-		map.put(id,new User(map.get(id).getPassword(),newName));
-		
-
+		if(map.containsKey(id)) {
+			User user = map.get(id);
+			user.setName(newName);
+			return true;
+		}
+		return false;
 		
 	}
-	public boolean deleteProfile(User u) {//계정 삭제
-		if(list.contains(u)) {
-			list.remove(u);
+	public boolean deleteProfile(String id) {//계정 삭제
+		if(map.containsKey(id)) {
+		//	User user = map.get(id);
 			
+			map.remove(id);
 			return true;// 계정 존재할경우 
 		}
 		return false;// 계정 없을 경우

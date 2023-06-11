@@ -67,6 +67,12 @@ public class User {
 	}
 
 	@Override
+	public String toString() {
+		return "User [id=" + id + ", password=" + password + ", phone=" + phone + ", nickname=" + nickname + ", name="
+				+ name + ", postlist=" + postlist + "]";
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

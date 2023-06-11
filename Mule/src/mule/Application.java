@@ -78,7 +78,7 @@ public class Application {
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
 		
-		if(uc.signup(id, new User(password,name))) {// password 왜 오류뜨냐
+		if(uc.signup(id, new User(id,password,phone,name))) {// password 왜 오류뜨냐
 			
 			System.out.println("회원가입이 완료되었습니다.");
 		}else {
