@@ -6,7 +6,7 @@ import java.util.List;
 import com.kh.model.Student;
 
 /*
- * 매핑
+ * 맵핑
  * - 중간 처리 기능으로 스트림의 요소를 다른 요소로 대체하는 역할
  * 
  * */

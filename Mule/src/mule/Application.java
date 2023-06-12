@@ -78,14 +78,14 @@ public class Application {
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
 		
-		if(uc.signup(id, new User(id,password,phone,name))) {// password 왜 오류뜨냐
+	//	if(uc.signup(id, new User(id,password,phone,name))) {// password 왜 오류뜨냐
 			
 			System.out.println("회원가입이 완료되었습니다.");
-		}else {
+//		}else {
 			System.out.println("중복된 아이디입니다. 다시 입력해주세요.");
 		}
 		
-	}
+//	}
 
 	public void login() {
 		
