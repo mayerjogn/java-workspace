@@ -167,27 +167,37 @@ System.out.println(formatDate);
 // 자신이 태어난 날을 yyyy/MM/dd 형태로 입력받아 해당 날짜가 무슨 요일이었는지, 지금까지 며칠이 지났는지 계산
 // 입력된 형식이 잘못된 경우 다시 입력받기
 				
-		Calendar born = Calendar.getInstance();
+//		Calendar born = Calendar.getInstance();
+		
+		int year, month ,day;
 		
 		System.out.println("생년월일 입력");
 		String birth = sc.nextLine();
 		String[] a = birth.split("/");//배열 입력받아서 해야되는디
-		
-		for(String s : a) {
-			Calendar d = Calendar.getInstance();	
+		Calendar born = Calendar.getInstance();
+		born.set(Integer.p(year), month, day);
+//		if(a.length != 3) {
+//			System.out.println("잘못된 형식입니다. 다시 입력하세요 ");
+//						
+//		}
+		try {
+		year = Integer.parseInt(a[0]);
+		month = Integer.parseInt(a[1]);
+		day = Integer.parseInt(a[2]);
+		System.out.println(a);		
+		}catch(NumberFormatException e) {
 			
-//			s = new GregorianCalendar();
-//			born.set(1996, Calendar.JULY, 2,0,0,0);
-//			Date d= new Date(born.getTimeInMillis());
-//			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd E");
-			System.out.println(s);
+			
+			if(a.length == 3) {
+				System.out.println(" ");
+				
+		}else {
+			System.out.println("잘못된 형식입니다. 다시 입력하세요.");
 		}
+	}
+	}
+}
 //		int iNum = Integer.parseInt(birth);//배열 입력받아서 해야되는디
-	}
-
-					
-	}
-	
 
 //try {
 //Calendar today = Calendar.getInstance();
@@ -216,4 +226,3 @@ System.out.println(formatDate);
 //}
 //} catch (NumberFormatException e) {
 //System.out.println("형태에 맞춰 입력해주세요.");
-
