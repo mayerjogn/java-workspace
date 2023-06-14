@@ -30,12 +30,12 @@ public class A_TryCatch {
 	 *   //try 블록에서 예외가 발생할 때
 	 *   //-->catch 블록으로 이동하여 예외 처리 코드 실행
 	 * 
-	 * } [finally{ <-- 있어도 그만 없어도 그만
+	 * } [finally]{ <-- 있어도 그만 없어도 그만
 	 * 
 	 * 		//예외가 발생하거나 발생하지 않거나 무조건 실행
 	 * 		//finally는 주로 자원을 반납하는 코드 ... ex : close()
 	 * 
-	 * }]
+	 * }
 	 * 
 	 * 
 	 * - printStackTrace(); : 예외발생 당시의 호출스택(Call Stack)에 
