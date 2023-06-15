@@ -29,24 +29,22 @@ public class Application {
 				System.out.println("******메인 메뉴******");
 				System.out.println("1. 회원가입");
 				System.out.println("2. 로그인");
-				System.out.println("3. ID,PW 찾기");
-				System.out.println("4. 계정 삭제");
+				System.out.println("3. 유저 메뉴");
 				System.out.println("9. 프로그램 종료");
 				System.out.println("메뉴 번호 입력 : ");
 				switch (Integer.parseInt(sc.nextLine())) {
 				case 1:
-					// login();
+					signup();
 					break;
 					
 				case 2:
+					login();
 					break;
 					
 				case 3:
+					userMenu();
 					break;
-					
-				case 4:
-					break;
-					
+														
 				case 9:
 					check = false;
 					System.out.println("프로그램 종료");
@@ -78,7 +76,7 @@ public class Application {
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
 		
-	//	if(uc.signup(id, new User(id,password,phone,name))) {// password 왜 오류뜨냐
+//		if(uc.signup(id, new User(id,password,phone,name))) {// password 왜 오류뜨냐
 			
 			System.out.println("회원가입이 완료되었습니다.");
 //		}else {
@@ -139,6 +137,20 @@ public class Application {
 			System.out.println("4. Post 보기");
 			System.out.println("5. Post 찾기");
 			System.out.println("6. Post 오름차순 정렬");
+		switch(Integer.parseInt(sc.nextLine())){
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		}
 		}
 	}
 
