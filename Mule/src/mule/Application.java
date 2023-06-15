@@ -65,7 +65,7 @@ public class Application {
 		String id = sc.nextLine();
 		
 		System.out.print("비밀번호 : ");
-		String pw = sc.nextLine();
+		String password = sc.nextLine();
 		
 		System.out.print("연락처 : ");
 		String phone = sc.nextLine();
@@ -76,14 +76,14 @@ public class Application {
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
 		
-//		if(uc.signup(id, new User(id,password,phone,name))) {// password 왜 오류뜨냐
+		if(uc.signup(id, new User(id,password,phone, name))) {// password 왜 오류뜨냐 흠
 			
 			System.out.println("회원가입이 완료되었습니다.");
-//		}else {
+		}else {
 			System.out.println("중복된 아이디입니다. 다시 입력해주세요.");
 		}
 		
-//	}
+	}
 
 	public void login() {
 		
@@ -95,16 +95,21 @@ public class Application {
 		String name = uc.login(id, password);
 		if(name != null) {
 			System.out.println("이지훈님, 환영합니다!");
-		//	userMenu();
+			try {
+				userMenu();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}else {
 			System.out.println("아이디 또는 비밀번호가 틀렸습니다.");
 		}
 	}
 	
-	public void userMenu() throws Exception {
+	public void userMenu() {
 
 		boolean check = true;
 		while(check) {
+			try {
 			System.out.println("=====User menu=====");
 			System.out.println("1. 이름 변경");
 			System.out.println("2. 계정삭제");
@@ -112,14 +117,19 @@ public class Application {
 			System.out.println("메뉴 번호 입력 :  ");
 			switch(Integer.parseInt(sc.nextLine())) {
 			case 1:
+				uc.changeName(null, null);
 				break;
 			case 2:
+				uc.deleteProfile(null);
 				break;
 			case 9 :
 				check = false;
 				break;
 			default:
-				throw new Exception();
+			}
+			}catch(Exception e) {
+				System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
+				break;
 				
 			}
 		}
@@ -139,16 +149,24 @@ public class Application {
 			System.out.println("6. Post 오름차순 정렬");
 		switch(Integer.parseInt(sc.nextLine())){
 		case 1:
+			pc.uploadPost(null);
 			break;
 		case 2:
+			pc.updatePost(0, null);
 			break;
 		case 3:
+			pc.deletePost(null);
 			break;
 		case 4:
+			pc.viewPost(0, null);
 			break;
 		case 5:
+			pc.searchPost(null);
 			break;
 		case 6:
+			break;
+		default:
+			System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
 			break;
 		}
 		}

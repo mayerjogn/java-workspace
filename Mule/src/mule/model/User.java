@@ -13,6 +13,16 @@ public class User {
 	
 	private List<Post> postlist; //근데 여기다가 담아놨는데..
 
+	public User(String id, String password, String phone, String nickname, String name, List<Post> postlist) {
+		super();
+		this.id = id;
+		this.password = password;
+		this.phone = phone;
+		this.nickname = nickname;
+		this.name = name;
+		this.postlist = postlist;
+	}
+
 	public String getId() {
 		return id;
 	}
