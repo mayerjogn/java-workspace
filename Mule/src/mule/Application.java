@@ -107,7 +107,8 @@ public class Application {
 		}
 	}
 	
-	public void userMenu() {
+	public void userMenu() throws Exception { 
+//Farm은 컨트롤러에 안만들어서 새로 만든거고 이거는 컨트롤러 다만들어놨잖아 그걸 어떻게 불러오냐고 돌대가리새끼야
 
 		boolean check = true;
 		while(check) {
@@ -131,17 +132,19 @@ public class Application {
 				check = false;
 				break;
 			default:
+				System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
+				throw new Exception();
 			}
 			}catch(Exception e) {
-				System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
-				break;
+				System.out.println(e.getMessage());
+				userMenu();
 				
 			}
 		}
 		
 	}
 
-	public void postMenu() {
+	public void postMenu() throws Exception {
 
 		boolean check = true;
 		while (check) {
@@ -172,7 +175,9 @@ public class Application {
 			break;
 		default:
 			System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
-			break;
+			throw new Exception();
+//			System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
+//			break;
 		}
 		}
 	}
