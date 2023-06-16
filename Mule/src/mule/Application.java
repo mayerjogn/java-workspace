@@ -1,16 +1,18 @@
 package mule;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import mule.controller.PostController;
 import mule.controller.UserController;
+import mule.model.Post;
 import mule.model.User;
 
 public class Application {
 	private UserController uc = new UserController();
 	private PostController pc = new PostController();
 	private Scanner sc = new Scanner(System.in);
-
+	ArrayList<Post> postlist = new ArrayList<>();
 	public static void main(String[] args) {
 
 		Application app = new Application();
@@ -30,6 +32,7 @@ public class Application {
 				System.out.println("1. 회원가입");
 				System.out.println("2. 로그인");
 				System.out.println("3. 유저 메뉴");
+				System.out.println("4. 포스트 메뉴");
 				System.out.println("9. 프로그램 종료");
 				System.out.println("메뉴 번호 입력 : ");
 				switch (Integer.parseInt(sc.nextLine())) {
@@ -43,6 +46,9 @@ public class Application {
 					
 				case 3:
 					userMenu();
+					break;
+				case 4:
+					postMenu();
 					break;
 														
 				case 9:
@@ -96,7 +102,7 @@ public class Application {
 		
 		String name = uc.login(id, password);
 		if(name != null) {
-			System.out.println("이지훈님, 환영합니다!");
+			System.out.println(name+"님, 환영합니다!");
 			try {
 				userMenu();
 			} catch (Exception e) {
@@ -120,13 +126,21 @@ public class Application {
 			System.out.println("메뉴 번호 입력 :  ");
 			switch(Integer.parseInt(sc.nextLine())) {
 			case 1:
-				uc.changeId(null, null);
-//				System.out.println("새로운 아이디 입력 : ");
-//				String newName = sc.nextLine();
-//				uc.changeId(String Id, newName);
+				System.out.println("현재 아이디 입력 : ");
+				String id = sc.nextLine();
+				System.out.println("새로운 아이디 입력 : ");
+				String newName = sc.nextLine();
+				uc.changeId(id, newName);
 				break;
 			case 2:
-				uc.deleteProfile(null);
+				System.out.println("삭제할 아이디 입력 : ");
+				String deleteid = sc.nextLine();
+				boolean delete= uc.deleteProfile(true);
+				if(delete) {
+					System.out.println("계정이 삭제되었습니다.");
+				}else {
+					System.out.println("계정을 찾을 수 없습니다.");
+				}
 				break;
 			case 9 :
 				check = false;
@@ -154,24 +168,54 @@ public class Application {
 			System.out.println("3. Post 삭제");
 			System.out.println("4. Post 보기");
 			System.out.println("5. Post 찾기");
-			System.out.println("6. Post 오름차순 정렬");
+			System.out.println("6. Post 오름차순 정렬");			System.out.println("메뉴 번호 입력 : ");
 		switch(Integer.parseInt(sc.nextLine())){
 		case 1:
-			pc.uploadPost(null);
+			Post newPost = uploadPost(); // 포스트 업로드
+			pc.uploadPost(newPost);
+			String post = sc.nextLine();
+			System.out.println("Post가 업로드됐습니다.");
 			break;
 		case 2:
-			pc.updatePost(0, null);
+			int updateIndex = getPostIndex();  //수정
+	        if (updateIndex >= 0 && updateIndex < postlist.size()) {
+	            Post updatePost = createPost(); 
+	            pc.updatePost(updateIndex, updatePost);
+	        } else {
+	            System.out.println("유효하지 않은 Post 번호입니다.");
+	        }
 			break;
 		case 3:
+			int deleteIndex = getPostIndex();
 			pc.deletePost(null);
 			break;
 		case 4:
-			pc.viewPost(0, null);
+			int viewIndex = getPostIndex();
+			if(viewIndex >=0 && viewIndex < postlist.size() ) {
+				Post viewPost = pc.viewPost(viewIndex, null);
+				System.out.println(viewPost);				
+			}else {
+				System.out.println("유효하지 않은 Post 번호입니다.");
+			}
 			break;
 		case 5:
-			pc.searchPost(null);
+			String searchTitle = getSearchTitle(); // 포스트 제목 받고 포스트 찾기
+			Post searchPost = pc.searchPost(searchTitle);
+			if(searchPost != null) {
+				System.out.println(searchPost);
+			}else {
+				System.out.println("검색하신 Post 찾을 수 없습니다.");
+			}
 			break;
 		case 6:
+			ArrayList<Post> sortedPost = pc.descPost();// 포스트 오름차순 정렬
+			break;
+		case 7 :
+			mainMenu();
+			break;
+		case 9 :
+			System.out.println("프로그램 종료");
+			check=false;
 			break;
 		default:
 			System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
@@ -180,6 +224,22 @@ public class Application {
 //			break;
 		}
 		}
+	}
+
+	private Post createPost() {
+		return null;
+	}
+
+	private String getSearchTitle() {
+		return null;
+	}
+
+	private int getPostIndex() {
+		return 0;
+	}
+
+	private Post uploadPost() {
+		return null;
 	}
 
 	}

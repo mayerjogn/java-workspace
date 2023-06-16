@@ -38,11 +38,11 @@ public class  UserController {
 	//	return false;
 		
 	}
-	public boolean deleteProfile(String id) {//계정 삭제
-		if(map.containsKey(id)) {
+	public boolean deleteProfile(boolean delete) {//계정 삭제
+		if(map.containsKey(delete)) {
 		//	User user = map.get(id);
 			
-			map.remove(id);
+			map.remove(delete);
 			return true;// 계정 존재할경우 
 		}
 		return false;// 계정 없을 경우
