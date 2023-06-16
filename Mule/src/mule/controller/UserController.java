@@ -28,14 +28,14 @@ public class  UserController {
 	return null;
 }
 
-	public boolean changeName(String id , String newName) {
+	public void changeId(String id , String newName) {
 		
 		if(map.containsKey(id)) {
 			User user = map.get(id);
 			user.setName(newName);
-			return true;
+	//		return true;
 		}
-		return false;
+	//	return false;
 		
 	}
 	public boolean deleteProfile(String id) {//계정 삭제

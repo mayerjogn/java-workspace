@@ -51,11 +51,13 @@ public class Application {
 					break;
 					
 					default:
+						System.out.println("잘못입력하셨습니다.");
 						throw new Exception();
+						
 				}
 			}
 		} catch (Exception e) {
-			System.out.println("잘못 입력하셨습니다. : " + e.getMessage());
+			System.out.println(/*"잘못 입력하셨습니다. : " +*/ e.getMessage());
 			mainMenu();
 		}
 
@@ -76,7 +78,7 @@ public class Application {
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
 		
-		if(uc.signup(id, new User(id,password,phone, name))) {// password 왜 오류뜨냐 흠
+		if(uc.signup(id, new User(id,password))) {// password 왜 오류뜨냐 흠
 			
 			System.out.println("회원가입이 완료되었습니다.");
 		}else {
@@ -111,13 +113,16 @@ public class Application {
 		while(check) {
 			try {
 			System.out.println("=====User menu=====");
-			System.out.println("1. 이름 변경");
+			System.out.println("1. 아이디 변경");
 			System.out.println("2. 계정삭제");
 			System.out.println("9. 메인 메뉴");
 			System.out.println("메뉴 번호 입력 :  ");
 			switch(Integer.parseInt(sc.nextLine())) {
 			case 1:
-				uc.changeName(null, null);
+				uc.changeId(null, null);
+//				System.out.println("새로운 아이디 입력 : ");
+//				String newName = sc.nextLine();
+//				uc.changeId(String Id, newName);
 				break;
 			case 2:
 				uc.deleteProfile(null);
