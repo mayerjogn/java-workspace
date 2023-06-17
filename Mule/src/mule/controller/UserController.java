@@ -10,10 +10,14 @@ public class  UserController {
 	private HashMap<String, User> map = new HashMap<>();
 	
 
-	public boolean signup(String id, User u) {//회원가입
+	public boolean signup(String id,User u) {//회원가입
 		if(!map.containsKey(id)) {
 			map.put(id, u);
+			System.out.println("회원 가입이 완료되었습니다.");
+			 System.out.println("등록된 회원 수: " + map.size());
 			return true;
+		}else {
+			System.out.println("중복된 아이디입니다. 다시 입력해주세요.");
 		}
 		return false;
 	}
@@ -28,21 +32,18 @@ public class  UserController {
 	return null;
 }
 
-	public void changeId(String id , String newName) {
+	public void changeId(String id, String newId) {
 		
-		if(map.containsKey(id)) {
-			User user = map.get(id);
-			user.setName(newName);
+		map.put(id, new User(map.get(id).getPassword(),newId));
+//		if(map.containsKey(id)) {
+//			User user = map.get(id);
+//			user.setName(newName);
 	//		return true;
 		}
-	//	return false;
-		
-	}
-	public boolean deleteProfile(boolean delete) {//계정 삭제
-		if(map.containsKey(delete)) {
-		//	User user = map.get(id);
-			
-			map.remove(delete);
+	public boolean deleteProfile(String id, String pw) {//계정 삭제
+		if(map.containsKey(id)&&map.get(id).getPassword().equals(pw)) {
+			map.remove(id);
+			System.out.println("등록된 회원 수: " + map.size());
 			return true;// 계정 존재할경우 
 		}
 		return false;// 계정 없을 경우

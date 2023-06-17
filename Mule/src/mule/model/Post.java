@@ -4,12 +4,10 @@ public class Post {
 
 	private String post;
 	private String title;
-	private String search;
 	public Post() {}
-	public Post(String post, String title, String search) {
+	public Post(String post, String title) {
 		this.post = post;
 		this.title = title;
-		this.search = search;
 	}
 	public String getPost() {
 		return post;
@@ -23,15 +21,15 @@ public class Post {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getSearch() {
-		return search;
+	@Override
+	public String toString() {
+		return "Post [post=" + post + ", title=" + title + "]";
 	}
-	public void setSearch(String search) {
-		this.search = search;
+	
 	}
 
 	
 	
 	
 
-}
+

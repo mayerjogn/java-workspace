@@ -13,6 +13,7 @@ public class Application {
 	private PostController pc = new PostController();
 	private Scanner sc = new Scanner(System.in);
 	ArrayList<Post> postlist = new ArrayList<>();
+
 	public static void main(String[] args) {
 
 		Application app = new Application();
@@ -22,11 +23,10 @@ public class Application {
 	}
 
 	public void mainMenu() {
+		boolean check = true;
 
 		try {
 			System.out.println("===== Mule =====");
-
-			boolean check = true;
 			while (check) {
 				System.out.println("******메인 메뉴******");
 				System.out.println("1. 회원가입");
@@ -39,209 +39,204 @@ public class Application {
 				case 1:
 					signup();
 					break;
-					
+
 				case 2:
 					login();
 					break;
-					
+
 				case 3:
 					userMenu();
 					break;
 				case 4:
 					postMenu();
 					break;
-														
+
 				case 9:
 					check = false;
 					System.out.println("프로그램 종료");
 					break;
-					
-					default:
-						System.out.println("잘못입력하셨습니다.");
-						throw new Exception();
-						
+
+				default:
+					System.out.println("잘못입력하셨습니다.");
+					throw new Exception();
+
 				}
 			}
 		} catch (Exception e) {
-			System.out.println(/*"잘못 입력하셨습니다. : " +*/ e.getMessage());
+			System.out.println(/* "잘못 입력하셨습니다. : " + */ e.getMessage());
 			mainMenu();
 		}
 
 	}
+
 	public void signup() {
 		System.out.print("아이디 : ");
 		String id = sc.nextLine();
-		
+
 		System.out.print("비밀번호 : ");
 		String password = sc.nextLine();
-		
-		System.out.print("연락처 : ");
-		String phone = sc.nextLine();
-		
-		System.out.print("닉네임 : ");
-		String nickname = sc.nextLine();
-		
+
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
-		
-		if(uc.signup(id, new User(id,password))) {// password 왜 오류뜨냐 흠
-			
-			System.out.println("회원가입이 완료되었습니다.");
-		}else {
-			System.out.println("중복된 아이디입니다. 다시 입력해주세요.");
+
+		if (uc.signup(id, new User(password, name))) {
+
+		} else {
+			System.out.println("중복된 아이디입니다.");
 		}
-		
+
 	}
 
 	public void login() {
-		
+
 		System.out.print("아이디 : ");
 		String id = sc.nextLine();
 		System.out.print("비밀번호 : ");
 		String password = sc.nextLine();
-		
+
 		String name = uc.login(id, password);
-		if(name != null) {
-			System.out.println(name+"님, 환영합니다!");
-			try {
-				userMenu();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}else {
+		if (name != null) {
+			System.out.println(id + "님, 환영합니다!");
+			userMenu();
+		} else {
 			System.out.println("아이디 또는 비밀번호가 틀렸습니다.");
 		}
 	}
-	
-	public void userMenu() throws Exception { 
-//Farm은 컨트롤러에 안만들어서 새로 만든거고 이거는 컨트롤러 다만들어놨잖아 그걸 어떻게 불러오냐고 돌대가리새끼야
+
+	public void userMenu() {
 
 		boolean check = true;
-		while(check) {
+		while (check) {
 			try {
-			System.out.println("=====User menu=====");
-			System.out.println("1. 아이디 변경");
-			System.out.println("2. 계정삭제");
-			System.out.println("9. 메인 메뉴");
-			System.out.println("메뉴 번호 입력 :  ");
-			switch(Integer.parseInt(sc.nextLine())) {
-			case 1:
-				System.out.println("현재 아이디 입력 : ");
-				String id = sc.nextLine();
-				System.out.println("새로운 아이디 입력 : ");
-				String newName = sc.nextLine();
-				uc.changeId(id, newName);
-				break;
-			case 2:
-				System.out.println("삭제할 아이디 입력 : ");
-				String deleteid = sc.nextLine();
-				boolean delete= uc.deleteProfile(true);
-				if(delete) {
-					System.out.println("계정이 삭제되었습니다.");
-				}else {
-					System.out.println("계정을 찾을 수 없습니다.");
+				System.out.println("=====User menu=====");
+				System.out.println("1. 아이디 변경");
+				System.out.println("2. 계정삭제");
+				System.out.println("3. 메인 메뉴");
+				System.out.println("메뉴 번호 입력 :  ");
+				switch (Integer.parseInt(sc.nextLine())) {
+				case 1:
+					changeId();
+					break;
+				case 2:
+					deleteId();
+					break;
+
+				case 3:
+					mainMenu();
+					break;
+				default:
+					System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
+					throw new Exception();
 				}
-				break;
-			case 9 :
-				check = false;
-				break;
-			default:
-				System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
-				throw new Exception();
-			}
-			}catch(Exception e) {
+			} catch (Exception e) {
 				System.out.println(e.getMessage());
 				userMenu();
-				
+
 			}
 		}
-		
+
 	}
 
-	public void postMenu() throws Exception {
+	public void changeId() {
+		System.out.print("아이디 : ");
+		String id = sc.nextLine();
+		System.out.print("비밀번호 : ");
+		String password = sc.nextLine();
+
+		String changeid = uc.login(id, password);
+		if (changeid != null) {
+			System.out.println("현재 ID : " + id);
+			System.out.println("변경할 ID : ");
+			String newid = sc.nextLine();
+			uc.changeId(id, newid);
+			System.out.println("ID 변경에 성공하였습니다." + "\n" + "새로운 ID : " + newid);
+
+		} else {
+			System.out.println("변경에 실패했습니다. 다시 입력하세요");
+		}
+
+	}
+
+	public void deleteId() {
+		System.out.println("삭제할 ID를 입력해주세요");
+		String deleteid = sc.nextLine();
+
+		System.out.println("삭제할 ID의 비밀번호를 입력해 주세요");
+		String pw = sc.nextLine();
+		uc.deleteProfile(deleteid, pw);
+		System.out.println("ID를 삭제했습니다.");
+		mainMenu();
+	}
+	// User 끝
+
+	public void postMenu() throws Exception { //기타 치고와서도 오! 하고 떠오르는게 없어서 기능 몇개삭제했습니다..
 
 		boolean check = true;
 		while (check) {
 			System.out.println("===== Post Menu ======");
 			System.out.println("1. Post 업로드");
-			System.out.println("2. Post 수정");
-			System.out.println("3. Post 삭제");
-			System.out.println("4. Post 보기");
-			System.out.println("5. Post 찾기");
-			System.out.println("6. Post 오름차순 정렬");			System.out.println("메뉴 번호 입력 : ");
+			System.out.println("2. 게시된 Post 찾기");
+			System.out.println("3. Post 오름차순 정렬");
+			System.out.println("7. 메인 메뉴");
+			
+			System.out.println("메뉴 번호 입력 : ");
 		switch(Integer.parseInt(sc.nextLine())){
 		case 1:
-			Post newPost = uploadPost(); // 포스트 업로드
-			pc.uploadPost(newPost);
-			String post = sc.nextLine();
-			System.out.println("Post가 업로드됐습니다.");
+			 uploadPost(); // 포스트 업로드
+			
 			break;
 		case 2:
-			int updateIndex = getPostIndex();  //수정
-	        if (updateIndex >= 0 && updateIndex < postlist.size()) {
-	            Post updatePost = createPost(); 
-	            pc.updatePost(updateIndex, updatePost);
-	        } else {
-	            System.out.println("유효하지 않은 Post 번호입니다.");
-	        }
+			searchPost();
 			break;
 		case 3:
-			int deleteIndex = getPostIndex();
-			pc.deletePost(null);
-			break;
-		case 4:
-			int viewIndex = getPostIndex();
-			if(viewIndex >=0 && viewIndex < postlist.size() ) {
-				Post viewPost = pc.viewPost(viewIndex, null);
-				System.out.println(viewPost);				
-			}else {
-				System.out.println("유효하지 않은 Post 번호입니다.");
-			}
-			break;
-		case 5:
-			String searchTitle = getSearchTitle(); // 포스트 제목 받고 포스트 찾기
-			Post searchPost = pc.searchPost(searchTitle);
-			if(searchPost != null) {
-				System.out.println(searchPost);
-			}else {
-				System.out.println("검색하신 Post 찾을 수 없습니다.");
-			}
-			break;
-		case 6:
-			ArrayList<Post> sortedPost = pc.descPost();// 포스트 오름차순 정렬
-			break;
+			descPost();			
+			
 		case 7 :
 			mainMenu();
 			break;
-		case 9 :
-			System.out.println("프로그램 종료");
-			check=false;
-			break;
+		
 		default:
 			System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
 			throw new Exception();
-//			System.out.println("유효하지 않은 메뉴 번호입니다 다시 입력해주세요.");
-//			break;
 		}
 		}
-	}
-
-	private Post createPost() {
-		return null;
-	}
-
-	private String getSearchTitle() {
-		return null;
-	}
-
-	private int getPostIndex() {
-		return 0;
-	}
-
-	private Post uploadPost() {
-		return null;
-	}
 
 	}
 
+	public void uploadPost() {
+		System.out.print("Post 제목 : ");
+		String title = sc.nextLine();
+		System.out.print("Post의 내용을 입력하세요 : ");
+		String content = sc.nextLine();
 
+		if (pc.uploadPost(new Post(content, title))) {
+			System.out.println("Post가 추가됐습니다.");
+		} else {
+			System.out.println("Post 추가를 실패했습니다.");
+		}
+	}
+
+	public void searchPost() {// 여긴 title이 먼저나오고 post가 뒤에 나왔으면 좋겠는데 어떻게해야할까요
+		System.out.println("검색할 Post를 입력하세요");
+		Post post = pc.searchPost(sc.nextLine());
+
+		if (post != null) {
+			System.out.println(post + "을 검색했습니다.");
+		} else {
+			System.out.println("검색하신 Post가 없습니다.");
+		}
+	}
+
+	public void descPost() {
+		System.out.println("======= Post 오름 차순 정렬 ========");
+		ArrayList<Post> sortedPosts = pc.descPost();
+		if(sortedPosts.isEmpty()) {
+			System.out.println("게시된 Post가 없습니다.");			
+		}else {
+			for(Post post : sortedPosts) {
+				System.out.println(post);
+				
+			}
+		}
+	}
+}

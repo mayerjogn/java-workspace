@@ -81,7 +81,7 @@ public class Application {
 		
 		String name = mc.login(id, password);
 		if (name != null) {
-			System.out.println("이지훈님, 환영합니다!");// 복습
+			System.out.println(name+"님, 환영합니다!");// 복습
 			memberMenu();
 		} else {
 			System.out.println("틀린 아이디 또는 비밀번호입니다. 다시 입력해주세요.");
@@ -146,7 +146,7 @@ public class Application {
 		String name = mc.login(id, password);//흠...
 		if (name != null) {
 			System.out.println("현재 설정된 이름 : "+name);
-			System.out.println("변경할 이름 : "+name);
+			System.out.println("변경할 이름 : ");
 			String newName = sc.nextLine();
 			mc.changeName(id, newName);
 			System.out.println("이름 변경에 성공하였습니다.");
