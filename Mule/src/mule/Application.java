@@ -19,7 +19,6 @@ public class Application {
 		Application app = new Application();
 		app.mainMenu();
 
-		// 어렵게 생각하지말고 간단하게 구현할수 있게되면 될거같은데
 	}
 
 	public void mainMenu() {
