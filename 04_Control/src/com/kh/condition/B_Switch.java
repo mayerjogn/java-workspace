@@ -143,8 +143,8 @@ public class B_Switch {
 	public static void main(String[] args) {
 		B_Switch b = new B_Switch();
 	//	b.method1();
-	//	b.Practice1();
-		b.Practice2();
+		b.Practice1();
+	//	b.Practice2();
 	}
 
 }
