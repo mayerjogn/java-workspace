@@ -57,7 +57,7 @@ public class A_HashMap {
 		 * 4. entrySet() 메서드
 		 * - entrySet() 메서드는 Map 컬렉션이 있는 
 		 *   Entry 객체(key, value 쌍으로 이루어진)를
-		 *   Set 컬렉션에 감아서 반환함
+		 *   Set 컬렉션에 담아서 반환함
 		 * */		//사용 자제?
 		Set<Entry<String, Integer>> entrySet = map.entrySet();
 		for(Entry<String, Integer> entry : entrySet) {

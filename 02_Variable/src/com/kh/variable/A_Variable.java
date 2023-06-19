@@ -56,7 +56,7 @@ public class A_Variable {
 		
 		//* 기본 자료형(Primitive type) 
 		// 실제 값을 저장		
-		// 논리형 : 1byte
+		// 논리형 : 1byte 	
 		boolean isTrue;
 		isTrue = true;
 		
@@ -139,3 +139,15 @@ public class A_Variable {
 	}
 	
 }
+/*
+ * boolean 1byte
+ * ch 2byte
+ * byte 1byte
+ * short 2byte
+ * int 4byte
+ * long 8byte
+ * float 4byte
+ * double 8byte
+ * String 4byte
+ * */ 
+ 
